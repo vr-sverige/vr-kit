@@ -79,39 +79,6 @@
           }
         }
       }
-    },
-    "vr-kit": {
-      "projectType": "library",
-      "root": "projects/vr-kit",
-      "sourceRoot": "projects/vr-kit/src",
-      "prefix": "lib",
-      "architect": {
-        "build": {
-          "builder": "@angular-devkit/build-angular:ng-packagr",
-          "options": {
-            "project": "projects/vr-kit/ng-package.json"
-          },
-          "configurations": {
-            "production": {
-              "tsConfig": "projects/vr-kit/tsconfig.lib.prod.json"
-            },
-            "development": {
-              "tsConfig": "projects/vr-kit/tsconfig.lib.json"
-            }
-          },
-          "defaultConfiguration": "production"
-        },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "tsConfig": "projects/vr-kit/tsconfig.spec.json",
-            "polyfills": [
-              "zone.js",
-              "zone.js/testing"
-            ]
-          }
-        }
-      }
     }
   }
 }
