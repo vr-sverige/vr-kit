@@ -57,3 +57,28 @@ Angular CLI does not come with an end-to-end testing framework by default. You c
 ## Additional Resources
 
 For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+
+
+Run storybooks:
+```bash
+ng run vr-lib:storybook
+```
+
+
+Publish to NPM
+
+To publish your vr-lib Angular library to npm, follow these steps:
+
+Build the library:
+
+Navigate to the dist output:
+
+Log in to npm (if not already):
+
+Publish the package:
+
+(Use --access public for public packages; omit for private.)
+
+Make sure your package.json in vr-lib has a unique name and correct version.
+
+Would you like me to check or update your package.json for npm publishing?
