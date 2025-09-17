@@ -34,6 +34,21 @@
             ]
           }
         },
+        "storybook": {
+  "builder": "@storybook/angular:start-storybook",
+  "options": {
+    "configDir": "projects/vr-lib/.storybook",
+    "browserTarget": "vr-lib:build",
+    "compodoc": true,
+    "compodocArgs": [
+      "-e",
+      "json",
+      "-d",
+      "projects/vr-lib"
+    ],
+    "port": 6006
+  }
+},
         "build-storybook": {
           "builder": "@storybook/angular:build-storybook",
           "options": {
