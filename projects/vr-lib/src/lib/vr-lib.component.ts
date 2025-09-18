@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 
 @Component({
   selector: 'lib-vr-lib',
-  imports: [],
+  styleUrls: [],
+  imports: [MatButtonModule],
   template: `
-    <p>
-      vr-lib works!
-    </p>
+    
+    <button mat-button>Material Button</button>
   `,
   styles: ``
 })
