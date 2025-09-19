@@ -6,52 +6,7 @@
     "interceptors": [],
     "classes": [],
     "directives": [],
-    "components": [
-        {
-            "name": "StorybookMaterialCardComponent",
-            "id": "component-StorybookMaterialCardComponent-35cc56377dee01bea920d19f4e7dac6a199b0b31896c66aabf0c527ba9f32757dc5bf1892c304116647a5bc563146bc6dcfe2a5a47683aedbf8d5a2f038b2670",
-            "file": "projects/vr-lib/src/lib/material-stories/material-card.stories.ts",
-            "encapsulation": [],
-            "entryComponents": [],
-            "inputs": [],
-            "outputs": [],
-            "providers": [],
-            "selector": "storybook-material-card",
-            "styleUrls": [],
-            "styles": [],
-            "template": "<mat-card>\n  <mat-card-header>\n    <mat-card-title>Material Card</mat-card-title>\n    <mat-card-subtitle>With Angular Material styling</mat-card-subtitle>\n  </mat-card-header>\n  <mat-card-content>\n    <p>This is a Material card with a primary button.</p>\n  </mat-card-content>\n  <mat-card-actions>\n    <button mat-raised-button color=\"primary\">Primary Action</button>\n  </mat-card-actions>\n</mat-card>\n",
-            "templateUrl": [],
-            "viewProviders": [],
-            "hostDirectives": [],
-            "inputsClass": [],
-            "outputsClass": [],
-            "propertiesClass": [],
-            "methodsClass": [],
-            "deprecated": false,
-            "deprecationMessage": "",
-            "hostBindings": [],
-            "hostListeners": [],
-            "standalone": true,
-            "imports": [
-                {
-                    "name": "MatCardModule",
-                    "type": "module"
-                },
-                {
-                    "name": "MatButtonModule",
-                    "type": "module"
-                }
-            ],
-            "description": "",
-            "rawdescription": "\n",
-            "type": "component",
-            "sourceCode": "import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';\r\nimport { MatCardModule } from '@angular/material/card';\r\nimport { MatButtonModule } from '@angular/material/button';\r\nimport { Component } from '@angular/core';\r\n\r\n@Component({\r\n  selector: 'storybook-material-card',\r\n  template: `\r\n    <mat-card>\r\n      <mat-card-header>\r\n        <mat-card-title>Material Card</mat-card-title>\r\n        <mat-card-subtitle>With Angular Material styling</mat-card-subtitle>\r\n      </mat-card-header>\r\n      <mat-card-content>\r\n        <p>This is a Material card with a primary button.</p>\r\n      </mat-card-content>\r\n      <mat-card-actions>\r\n        <button mat-raised-button color=\"primary\">Primary Action</button>\r\n      </mat-card-actions>\r\n    </mat-card>\r\n  `,\r\n  standalone: true,\r\n  imports: [MatCardModule, MatButtonModule],\r\n})\r\nclass StorybookMaterialCardComponent {}\r\n\r\nexport default {\r\n  title: 'Material/Card',\r\n  component: StorybookMaterialCardComponent,\r\n} as Meta<StorybookMaterialCardComponent>;\r\n\r\ntype Story = StoryObj<StorybookMaterialCardComponent>;\r\n\r\nexport const Primary: Story = {};\r\n",
-            "assetsDirs": [],
-            "styleUrlsData": "",
-            "stylesData": "",
-            "extends": []
-        }
-    ],
+    "components": [],
     "modules": [],
     "miscellaneous": {
         "variables": [
@@ -76,6 +31,16 @@
                 "defaultValue": "{\r\n  title: 'vr-lib/VrLibComponent',\r\n  component: VrLibComponent,\r\n  tags: ['autodocs'],\r\n}"
             },
             {
+                "name": "Overview",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/material-overview/material-overview.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {},\r\n}"
+            },
+            {
                 "name": "preview",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -84,16 +49,6 @@
                 "deprecationMessage": "",
                 "type": "Preview",
                 "defaultValue": "{\r\n  parameters: {\r\n    controls: {\r\n      matchers: {\r\n       color: /(background|color)$/i,\r\n       date: /Date$/i,\r\n      },\r\n    },\r\n  },\r\n}"
-            },
-            {
-                "name": "Primary",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/vr-lib/src/lib/material-stories/material-card.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{}"
             }
         ],
         "functions": [],
@@ -113,8 +68,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<StorybookMaterialCardComponent>",
-                "file": "projects/vr-lib/src/lib/material-stories/material-card.stories.ts",
+                "rawtype": "StoryObj<MaterialOverviewComponent>",
+                "file": "projects/vr-lib/src/lib/material-overview/material-overview.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -145,6 +100,18 @@
                     "defaultValue": "{\r\n  title: 'vr-lib/VrLibComponent',\r\n  component: VrLibComponent,\r\n  tags: ['autodocs'],\r\n}"
                 }
             ],
+            "projects/vr-lib/src/lib/material-overview/material-overview.stories.ts": [
+                {
+                    "name": "Overview",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/material-overview/material-overview.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {},\r\n}"
+                }
+            ],
             "projects/vr-lib/.storybook/preview.ts": [
                 {
                     "name": "preview",
@@ -155,18 +122,6 @@
                     "deprecationMessage": "",
                     "type": "Preview",
                     "defaultValue": "{\r\n  parameters: {\r\n    controls: {\r\n      matchers: {\r\n       color: /(background|color)$/i,\r\n       date: /Date$/i,\r\n      },\r\n    },\r\n  },\r\n}"
-                }
-            ],
-            "projects/vr-lib/src/lib/material-stories/material-card.stories.ts": [
-                {
-                    "name": "Primary",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/vr-lib/src/lib/material-stories/material-card.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{}"
                 }
             ]
         },
@@ -186,13 +141,13 @@
                     "kind": 183
                 }
             ],
-            "projects/vr-lib/src/lib/material-stories/material-card.stories.ts": [
+            "projects/vr-lib/src/lib/material-overview/material-overview.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<StorybookMaterialCardComponent>",
-                    "file": "projects/vr-lib/src/lib/material-stories/material-card.stories.ts",
+                    "rawtype": "StoryObj<MaterialOverviewComponent>",
+                    "file": "projects/vr-lib/src/lib/material-overview/material-overview.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -221,26 +176,17 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/vr-lib/src/lib/material-stories/material-card.stories.ts",
-                "type": "component",
-                "linktype": "component",
-                "name": "StorybookMaterialCardComponent",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/vr-lib/src/lib/material-stories/material-card.stories.ts",
+                "filePath": "projects/vr-lib/src/lib/material-overview/material-overview.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Primary",
+                "name": "Overview",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "projects/vr-lib/src/lib/material-stories/material-card.stories.ts",
+                "filePath": "projects/vr-lib/src/lib/material-overview/material-overview.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",
