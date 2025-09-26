@@ -35,28 +35,20 @@ Once the project is built, you can publish your library by following these steps
    cd dist/vr-lib
    ```
 
-2. Run the `npm publish` command to publish your library to the npm registry:
+2. compile css to dist folder
+   ```bash
+   npx sass --load-path=node_modules projects/vr-lib/src/lib/styles/styles.scss dist/vr-lib/styles.css
+   ```
+
+3. Login to npm (if not already logged in):
+   ```bash
+   npm login
+   ```
+
+4. Run the `npm publish` command to publish your library to the npm registry:
    ```bash
    npm publish
    ```
-
-## Running unit tests
-
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
 
 ## Additional Resources
 

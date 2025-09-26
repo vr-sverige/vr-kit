@@ -1,7 +1,6 @@
 @use '@angular/material' as mat;
 @use "./vr-material-theme" as vr;
 
-@import './typeface.scss';
 
 html {
    @include mat.all-component-themes(vr.$light-theme);
