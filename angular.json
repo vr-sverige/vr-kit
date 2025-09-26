@@ -48,9 +48,9 @@
             ],
             "port": 6006,
             "styles": [
-            "@angular/material/prebuilt-themes/indigo-pink.css",
-            "src/styles.scss"
-          ]
+              "@angular/material/prebuilt-themes/indigo-pink.css",
+              "projects/vr-lib/src/lib/styles/styles.scss"
+            ]
           }
         },
         "build-storybook": {
@@ -67,7 +67,7 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
-              "src/styles.scss"
+              "projects/vr-lib/src/lib/styles/styles.scss"
             ],
             "outputDir": "storybook-static"
           }
