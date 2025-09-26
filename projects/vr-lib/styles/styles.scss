@@ -4,28 +4,5 @@
 @import './typeface.scss';
 
 html {
-  @include mat.form-field-theme(vr.$light-theme);
-  @include mat.datepicker-theme(vr.$light-theme);
-  @include mat.select-theme(vr.$light-theme);
-  @include mat.autocomplete-theme(vr.$light-theme);
-  @include mat.checkbox-theme(vr.$light-theme);
-  @include mat.tooltip-theme(vr.$light-theme);
-  @include mat.paginator-theme(vr.$light-theme);
-  @include mat.button-theme(vr.$light-theme);
-  @include mat.card-theme(vr.$light-theme);
-  @include mat.grid-list-theme(vr.$light-theme);
-  @include mat.divider-theme(vr.$light-theme);
-  @include mat.slider-theme(vr.$light-theme);
-  @include mat.expansion-theme(vr.$light-theme);
-  @include mat.tabs-theme(vr.$light-theme);
-  @include mat.menu-theme(vr.$light-theme);
-  @include mat.table-theme(vr.$light-theme);
-  @include mat.list-theme(vr.$light-theme);
-  @include mat.slide-toggle-theme(vr.$light-theme);
-  @include mat.tree-theme(vr.$light-theme);
-  @include mat.stepper-theme(vr.$light-theme);
-  @include mat.button-toggle-theme(vr.$light-theme);
-  @include mat.snack-bar-theme(vr.$light-theme);
-  @include mat.dialog-theme(vr.$light-theme);
-
+   @include mat.all-component-themes(vr.$light-theme);
 }
