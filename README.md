@@ -30,10 +30,11 @@ This command will compile your project, and the build artifacts will be placed i
 
 Once the project is built, you can publish your library by following these steps:
 
-1. Navigate to the `dist` directory:
-   ```bash
-   cd dist/vr-lib
-   ```
+1. To build the library, run:
+
+```bash
+ng build vr-lib
+``
 
 2. compile css to dist folder
    ```bash
