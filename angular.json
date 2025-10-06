@@ -47,6 +47,14 @@
               "projects/vr-lib"
             ],
             "port": 6006,
+            "assets": [
+              "projects/vr-lib/src/assets",
+              {
+                "glob": "**/*",
+                "input": "projects/vr-lib/assets",
+                "output": "/assets/"
+              }
+            ],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",
               "projects/vr-lib/src/lib/styles/styles.scss"
@@ -64,6 +72,14 @@
               "json",
               "-d",
               "projects/vr-lib"
+            ],
+            "assets": [
+              "projects/vr-lib/src/assets",
+              {
+                "glob": "**/*",
+                "input": "projects/vr-lib/assets",
+                "output": "/assets/"
+              }
             ],
             "styles": [
               "@angular/material/prebuilt-themes/indigo-pink.css",

@@ -1,4 +1,5 @@
 # VrKit
+https://www.npmjs.com/package/vr-kit
 
 ## Development server
 

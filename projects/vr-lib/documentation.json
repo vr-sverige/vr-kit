@@ -21,6 +21,26 @@
                 "defaultValue": "{\r\n  args: {},\r\n}"
             },
             {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/header/header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    navigationItems,\r\n    districts,\r\n    currentDistrictIds: [1],\r\n    userInfoModel: userInfo,\r\n  },\r\n}"
+            },
+            {
+                "name": "districts",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/header/header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[\r\n  { id: 1, name: 'Central' },\r\n  { id: 2, name: 'North' },\r\n  { id: 3, name: 'South' }\r\n]"
+            },
+            {
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -29,6 +49,16 @@
                 "deprecationMessage": "",
                 "type": "Meta<VrLibComponent>",
                 "defaultValue": "{\r\n  title: 'vr-lib/VrLibComponent',\r\n  component: VrLibComponent,\r\n  tags: ['autodocs'],\r\n}"
+            },
+            {
+                "name": "navigationItems",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/header/header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[\r\n  { route: '', name: 'Home', isActive: true },\r\n  { route: '/about', name: 'About', isActive: false },\r\n  { route: '/contact', name: 'Contact', isActive: false },\r\n  { route: '/help', name: 'Help', isActive: false }\r\n]"
             },
             {
                 "name": "Overview",
@@ -49,6 +79,16 @@
                 "deprecationMessage": "",
                 "type": "Preview",
                 "defaultValue": "{\r\n  parameters: {\r\n    controls: {\r\n      matchers: {\r\n       color: /(background|color)$/i,\r\n       date: /Date$/i,\r\n      },\r\n    },\r\n  },\r\n}"
+            },
+            {
+                "name": "userInfo",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/header/header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "UserInfoModel",
+                "defaultValue": "{\r\n  name: 'John Doe',\r\n  emailLabel: 'Email',\r\n  emailContent: 'john.doe@example.com',\r\n  phoneLabel: 'Phone',\r\n  phoneContent: '+123456789',\r\n  districtLabel: 'District',\r\n  districtContent: 'Central',\r\n  roleLabel: 'Role',\r\n  roleContent: ['Admin'],\r\n  logoutLabel: 'Logout',\r\n}"
             }
         ],
         "functions": [],
@@ -70,6 +110,17 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<MaterialOverviewComponent>",
                 "file": "projects/vr-lib/src/lib/material-overview/material-overview.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<VrKitHeaderComponent>",
+                "file": "projects/vr-lib/src/lib/components/header/header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -98,6 +149,48 @@
                     "deprecationMessage": "",
                     "type": "Meta<VrLibComponent>",
                     "defaultValue": "{\r\n  title: 'vr-lib/VrLibComponent',\r\n  component: VrLibComponent,\r\n  tags: ['autodocs'],\r\n}"
+                }
+            ],
+            "projects/vr-lib/src/lib/components/header/header.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/header/header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n  args: {\r\n    navigationItems,\r\n    districts,\r\n    currentDistrictIds: [1],\r\n    userInfoModel: userInfo,\r\n  },\r\n}"
+                },
+                {
+                    "name": "districts",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/header/header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[\r\n  { id: 1, name: 'Central' },\r\n  { id: 2, name: 'North' },\r\n  { id: 3, name: 'South' }\r\n]"
+                },
+                {
+                    "name": "navigationItems",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/header/header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[\r\n  { route: '', name: 'Home', isActive: true },\r\n  { route: '/about', name: 'About', isActive: false },\r\n  { route: '/contact', name: 'Contact', isActive: false },\r\n  { route: '/help', name: 'Help', isActive: false }\r\n]"
+                },
+                {
+                    "name": "userInfo",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/header/header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "UserInfoModel",
+                    "defaultValue": "{\r\n  name: 'John Doe',\r\n  emailLabel: 'Email',\r\n  emailContent: 'john.doe@example.com',\r\n  phoneLabel: 'Phone',\r\n  phoneContent: '+123456789',\r\n  districtLabel: 'District',\r\n  districtContent: 'Central',\r\n  roleLabel: 'Role',\r\n  roleContent: ['Admin'],\r\n  logoutLabel: 'Logout',\r\n}"
                 }
             ],
             "projects/vr-lib/src/lib/material-overview/material-overview.stories.ts": [
@@ -153,6 +246,19 @@
                     "description": "",
                     "kind": 183
                 }
+            ],
+            "projects/vr-lib/src/lib/components/header/header.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<VrKitHeaderComponent>",
+                    "file": "projects/vr-lib/src/lib/components/header/header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
             ]
         }
     },
@@ -171,6 +277,56 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "preview",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/header/header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/header/header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "districts",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/header/header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "navigationItems",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/header/header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "userInfo",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/header/header.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
