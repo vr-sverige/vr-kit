@@ -1,0 +1,19 @@
+.stepper {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+
+  &__label {
+    font-size: 14px;
+    font-weight: 600;
+    background-color: #D8D8D8;
+    border-radius: 7px;
+    padding: 6px;
+  }
+
+  &__label--active {
+    background-color: #E3F1DD;
+  }
+}

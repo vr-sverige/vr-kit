@@ -8,8 +8,12 @@
 ### Added
 - header component
 
-## [0.0.53] - 2025-10-06
+## [0.0.53] - 2025-10-07
 ### Added
 - page header component
 - breadcrumb component
 
+## [0.0.54] - 2025-10-07
+### Added
+- article component
+- stepper component

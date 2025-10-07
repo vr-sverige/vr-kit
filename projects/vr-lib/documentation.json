@@ -14,11 +14,11 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/vr-lib/src/lib/vr-lib.component.stories.ts",
+                "file": "projects/vr-lib/src/lib/components/article/article.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {},\r\n}"
+                "type": "StoryObj<VrKitArticleComponent>",
+                "defaultValue": "{\r\n  args: {\r\n    display: 'sheet',\r\n    title: 'Sample Article Title',\r\n  },\r\n}"
             },
             {
                 "name": "Default",
@@ -34,11 +34,31 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/vr-lib/src/lib/components/header/page-header/page-header.stories.ts",
+                "file": "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "StoryObj<VrKitBreadcrumbComponent>",
+                "defaultValue": "{\r\n  args: {\r\n    list: exampleList,\r\n  },\r\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/page-header/page-header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "StoryObj<VrKitPageHeaderComponent>",
                 "defaultValue": "{\r\n  args: {\r\n    title: 'Dashboard',\r\n    breadcrumbList: [\r\n      { label: 'Home', url: '/' },\r\n      { label: 'Dashboard', url: '/dashboard' },\r\n    ],\r\n  },\r\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/stepper/stepper.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "StoryObj<VrKitStepperComponent>",
+                "defaultValue": "{\r\n  args: {\r\n    items: steps,\r\n  },\r\n}"
             },
             {
                 "name": "districts",
@@ -51,14 +71,14 @@
                 "defaultValue": "[\r\n  { id: 1, name: 'Central' },\r\n  { id: 2, name: 'North' },\r\n  { id: 3, name: 'South' }\r\n]"
             },
             {
-                "name": "meta",
+                "name": "exampleList",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/vr-lib/src/lib/vr-lib.component.stories.ts",
+                "file": "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<VrLibComponent>",
-                "defaultValue": "{\r\n  title: 'vr-lib/VrLibComponent',\r\n  component: VrLibComponent,\r\n  tags: ['autodocs'],\r\n}"
+                "type": "IBreadcrumb[]",
+                "defaultValue": "[\r\n  { label: 'Home', url: '/' },\r\n  { label: 'Section', url: '/section' },\r\n  { label: 'Page', url: '/section/page' },\r\n]"
             },
             {
                 "name": "navigationItems",
@@ -91,6 +111,26 @@
                 "defaultValue": "{\r\n  parameters: {\r\n    controls: {\r\n      matchers: {\r\n       color: /(background|color)$/i,\r\n       date: /Date$/i,\r\n      },\r\n    },\r\n  },\r\n}"
             },
             {
+                "name": "steps",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/stepper/stepper.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Step[]",
+                "defaultValue": "[\r\n  { displayName: 'Step 1', active: true },\r\n  { displayName: 'Step 2', active: false },\r\n  { displayName: 'Step 3', active: false },\r\n]"
+            },
+            {
+                "name": "Transparent",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/article/article.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "StoryObj<VrKitArticleComponent>",
+                "defaultValue": "{\r\n  args: {\r\n    display: 'transparent',\r\n    title: 'Transparent Article',\r\n  },\r\n}"
+            },
+            {
                 "name": "userInfo",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -99,21 +139,20 @@
                 "deprecationMessage": "",
                 "type": "UserInfoModel",
                 "defaultValue": "{\r\n  name: 'John Doe',\r\n  emailLabel: 'Email',\r\n  emailContent: 'john.doe@example.com',\r\n  phoneLabel: 'Phone',\r\n  phoneContent: '+123456789',\r\n  districtLabel: 'District',\r\n  districtContent: 'Central',\r\n  roleLabel: 'Role',\r\n  roleContent: ['Admin'],\r\n  logoutLabel: 'Logout',\r\n}"
+            },
+            {
+                "name": "White",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/article/article.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "StoryObj<VrKitArticleComponent>",
+                "defaultValue": "{\r\n  args: {\r\n    display: 'white',\r\n    title: 'White Article',\r\n  },\r\n}"
             }
         ],
         "functions": [],
         "typealiases": [
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<VrLibComponent>",
-                "file": "projects/vr-lib/src/lib/vr-lib.component.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
             {
                 "name": "Story",
                 "ctype": "miscellaneous",
@@ -139,26 +178,36 @@
         ],
         "enumerations": [],
         "groupedVariables": {
-            "projects/vr-lib/src/lib/vr-lib.component.stories.ts": [
+            "projects/vr-lib/src/lib/components/article/article.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/vr-lib/src/lib/vr-lib.component.stories.ts",
+                    "file": "projects/vr-lib/src/lib/components/article/article.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n  args: {},\r\n}"
+                    "type": "StoryObj<VrKitArticleComponent>",
+                    "defaultValue": "{\r\n  args: {\r\n    display: 'sheet',\r\n    title: 'Sample Article Title',\r\n  },\r\n}"
                 },
                 {
-                    "name": "meta",
+                    "name": "Transparent",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/vr-lib/src/lib/vr-lib.component.stories.ts",
+                    "file": "projects/vr-lib/src/lib/components/article/article.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Meta<VrLibComponent>",
-                    "defaultValue": "{\r\n  title: 'vr-lib/VrLibComponent',\r\n  component: VrLibComponent,\r\n  tags: ['autodocs'],\r\n}"
+                    "type": "StoryObj<VrKitArticleComponent>",
+                    "defaultValue": "{\r\n  args: {\r\n    display: 'transparent',\r\n    title: 'Transparent Article',\r\n  },\r\n}"
+                },
+                {
+                    "name": "White",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/article/article.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "StoryObj<VrKitArticleComponent>",
+                    "defaultValue": "{\r\n  args: {\r\n    display: 'white',\r\n    title: 'White Article',\r\n  },\r\n}"
                 }
             ],
             "projects/vr-lib/src/lib/components/header/header.stories.ts": [
@@ -203,16 +252,60 @@
                     "defaultValue": "{\r\n  name: 'John Doe',\r\n  emailLabel: 'Email',\r\n  emailContent: 'john.doe@example.com',\r\n  phoneLabel: 'Phone',\r\n  phoneContent: '+123456789',\r\n  districtLabel: 'District',\r\n  districtContent: 'Central',\r\n  roleLabel: 'Role',\r\n  roleContent: ['Admin'],\r\n  logoutLabel: 'Logout',\r\n}"
                 }
             ],
-            "projects/vr-lib/src/lib/components/header/page-header/page-header.stories.ts": [
+            "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/vr-lib/src/lib/components/header/page-header/page-header.stories.ts",
+                    "file": "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "StoryObj<VrKitBreadcrumbComponent>",
+                    "defaultValue": "{\r\n  args: {\r\n    list: exampleList,\r\n  },\r\n}"
+                },
+                {
+                    "name": "exampleList",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "IBreadcrumb[]",
+                    "defaultValue": "[\r\n  { label: 'Home', url: '/' },\r\n  { label: 'Section', url: '/section' },\r\n  { label: 'Page', url: '/section/page' },\r\n]"
+                }
+            ],
+            "projects/vr-lib/src/lib/components/page-header/page-header.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/page-header/page-header.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "StoryObj<VrKitPageHeaderComponent>",
                     "defaultValue": "{\r\n  args: {\r\n    title: 'Dashboard',\r\n    breadcrumbList: [\r\n      { label: 'Home', url: '/' },\r\n      { label: 'Dashboard', url: '/dashboard' },\r\n    ],\r\n  },\r\n}"
+                }
+            ],
+            "projects/vr-lib/src/lib/components/stepper/stepper.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/stepper/stepper.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "StoryObj<VrKitStepperComponent>",
+                    "defaultValue": "{\r\n  args: {\r\n    items: steps,\r\n  },\r\n}"
+                },
+                {
+                    "name": "steps",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/stepper/stepper.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Step[]",
+                    "defaultValue": "[\r\n  { displayName: 'Step 1', active: true },\r\n  { displayName: 'Step 2', active: false },\r\n  { displayName: 'Step 3', active: false },\r\n]"
                 }
             ],
             "projects/vr-lib/src/lib/material-overview/material-overview.stories.ts": [
@@ -243,19 +336,6 @@
         "groupedFunctions": {},
         "groupedEnumerations": {},
         "groupedTypeAliases": {
-            "projects/vr-lib/src/lib/vr-lib.component.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<VrLibComponent>",
-                    "file": "projects/vr-lib/src/lib/vr-lib.component.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
             "projects/vr-lib/src/lib/material-overview/material-overview.stories.ts": [
                 {
                     "name": "Story",
@@ -304,6 +384,56 @@
                 "status": "low"
             },
             {
+                "filePath": "projects/vr-lib/src/lib/components/article/article.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/article/article.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Transparent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/article/article.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "White",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "exampleList",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "projects/vr-lib/src/lib/components/header/header.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -354,11 +484,31 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/vr-lib/src/lib/components/header/page-header/page-header.stories.ts",
+                "filePath": "projects/vr-lib/src/lib/components/page-header/page-header.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/stepper/stepper.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/stepper/stepper.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "steps",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
@@ -375,36 +525,6 @@
             },
             {
                 "filePath": "projects/vr-lib/src/lib/material-overview/material-overview.stories.ts",
-                "type": "type alias",
-                "linktype": "miscellaneous",
-                "linksubtype": "typealias",
-                "name": "Story",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/vr-lib/src/lib/vr-lib.component.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Default",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/vr-lib/src/lib/vr-lib.component.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "meta",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/vr-lib/src/lib/vr-lib.component.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",

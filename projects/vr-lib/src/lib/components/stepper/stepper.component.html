@@ -1,0 +1,6 @@
+  <div class="stepper">
+    <ng-container *ngFor="let item of items">
+    <div class="stepper__label" [ngClass]="{'stepper__label--active': item.active}">{{ item.displayName }}</div>
+    <span class="material-symbols-outlined" *ngIf="!isLast(item)">trending_flat</span>
+    </ng-container>
+  </div>
