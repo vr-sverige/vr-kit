@@ -31,6 +31,16 @@
                 "defaultValue": "{\r\n  args: {\r\n    navigationItems,\r\n    districts,\r\n    currentDistrictIds: [1],\r\n    userInfoModel: userInfo,\r\n  },\r\n}"
             },
             {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/header/page-header/page-header.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "StoryObj<VrKitPageHeaderComponent>",
+                "defaultValue": "{\r\n  args: {\r\n    title: 'Dashboard',\r\n    breadcrumbList: [\r\n      { label: 'Home', url: '/' },\r\n      { label: 'Dashboard', url: '/dashboard' },\r\n    ],\r\n  },\r\n}"
+            },
+            {
                 "name": "districts",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -193,6 +203,18 @@
                     "defaultValue": "{\r\n  name: 'John Doe',\r\n  emailLabel: 'Email',\r\n  emailContent: 'john.doe@example.com',\r\n  phoneLabel: 'Phone',\r\n  phoneContent: '+123456789',\r\n  districtLabel: 'District',\r\n  districtContent: 'Central',\r\n  roleLabel: 'Role',\r\n  roleContent: ['Admin'],\r\n  logoutLabel: 'Logout',\r\n}"
                 }
             ],
+            "projects/vr-lib/src/lib/components/header/page-header/page-header.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/header/page-header/page-header.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "StoryObj<VrKitPageHeaderComponent>",
+                    "defaultValue": "{\r\n  args: {\r\n    title: 'Dashboard',\r\n    breadcrumbList: [\r\n      { label: 'Home', url: '/' },\r\n      { label: 'Dashboard', url: '/dashboard' },\r\n    ],\r\n  },\r\n}"
+                }
+            ],
             "projects/vr-lib/src/lib/material-overview/material-overview.stories.ts": [
                 {
                     "name": "Overview",
@@ -327,6 +349,16 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",
                 "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/header/page-header/page-header.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"

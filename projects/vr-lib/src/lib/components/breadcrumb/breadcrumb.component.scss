@@ -1,0 +1,34 @@
+.breadcrumb {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+
+  .path {
+    all: unset;
+    color: gray;
+    &.active-path {
+      cursor: pointer;
+      color: green;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .static-path {
+    all: unset;
+    color: gray;
+  }
+
+  .chevron {
+    max-width: 16px;
+    max-height: 16px;
+    text-align: center;
+  }
+}
+
+.divider {
+  color: green;
+  margin: 0 8px;
+}
