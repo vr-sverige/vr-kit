@@ -4,7 +4,12 @@
 ### Added
 - Mat theming
 
-## [0.0.5] - 2025-10-06
+## [0.0.51] - 2025-10-06
 ### Added
 - header component
+
+## [0.0.53] - 2025-10-06
+### Added
+- page header component
+- breadcrumb component
 

@@ -1,0 +1,13 @@
+<div class="breadcrumb">
+  <ng-container *ngFor="let breadcrumb of list; let last = last">
+    @if (breadcrumb.url && breadcrumb.url.length > 0) {
+      <a class="path" [ngClass]="{ 'active-path': !isActive(breadcrumb) }" [routerLink]="[breadcrumb.url]">
+        {{ breadcrumb.label }}
+      </a>
+    }
+    @else {
+      <span class="static-path">{{ breadcrumb.label }}</span>
+    }
+    <span class="divider" *ngIf="!last"> | </span>
+  </ng-container>
+</div>

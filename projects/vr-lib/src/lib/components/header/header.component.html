@@ -8,7 +8,7 @@
             </a>
         </ng-container>
     </nav>
-    @if(districts?.length) {
+    @if(districts.length) {
     <button class="menu__button" [matMenuTriggerFor]="districtMenu">
         <span class="material-icons-outlined">place</span>
         {{ getCurrentDistrictName() }}

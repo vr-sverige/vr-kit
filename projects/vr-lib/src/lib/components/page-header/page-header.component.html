@@ -1,0 +1,12 @@
+<div class="page-header">
+  @if (breadcrumbList && breadcrumbList.length > 0)
+  {
+    <vr-kit-breadcrumb
+      class="page-header__breadcrumb"
+      [list]="breadcrumbList"></vr-kit-breadcrumb>
+  }
+  <h1 class="page-header__title">{{ title }}</h1>
+  <div class="page-header__action">
+    <ng-content></ng-content>
+  </div>
+</div>
