@@ -11,6 +11,26 @@
     "miscellaneous": {
         "variables": [
             {
+                "name": "Basic",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/no-data/no-data-day.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n\targs: {},\r\n}"
+            },
+            {
+                "name": "Basic",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/no-data/no-data-night.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n\targs: {},\r\n}"
+            },
+            {
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -81,24 +101,64 @@
                 "defaultValue": "[\r\n  { label: 'Home', url: '/' },\r\n  { label: 'Section', url: '/section' },\r\n  { label: 'Page', url: '/section/page' },\r\n]"
             },
             {
-                "name": "meta",
+                "name": "IconList",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/vr-lib/src/lib/components/legacy/label/label-day.stories.ts",
+                "file": "projects/vr-lib/src/lib/components/icon/icon-day.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<LabelComponent>",
-                "defaultValue": "{\r\n\ttitle: 'Example/Label/Day Theme',\r\n\tcomponent: LabelComponent,\r\n\tdecorators: [\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t(story) =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-day\" style=\"padding: 30px; background-color: #f5f5f5;\">${story}</div>`\r\n\t\t),\r\n\t],\r\n}"
+                "type": "Story",
+                "defaultValue": "{\r\n\trender: (args) => ({\r\n\t\tprops: args,\r\n\t\ttemplate: `<div style=\"display:flex; flex-wrap: wrap; gap: 20px;\">${template}</div>`,\r\n\t}),\r\n}"
+            },
+            {
+                "name": "IconList",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/icon/icon-night.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n\trender: (args) => ({\r\n\t\tprops: args,\r\n\t\ttemplate: `<div style=\"display:flex; flex-wrap: wrap; gap: 20px;\">${template}</div>`,\r\n\t}),\r\n}"
             },
             {
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/vr-lib/src/lib/components/legacy/label/label-night.stories.ts",
+                "file": "projects/vr-lib/src/lib/components/icon/icon-day.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "Meta<LabelComponent>",
-                "defaultValue": "{\r\n\ttitle: 'Example/Label/Night Theme',\r\n\tcomponent: LabelComponent,\r\n\tdecorators: [\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t(story) =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-night\" style=\"padding: 30px; background-color: #404040;\">${story}</div>`\r\n\t\t),\r\n\t],\r\n}"
+                "type": "Meta<VrKitIconComponent>",
+                "defaultValue": "{\r\n\ttitle: 'Components/Icon/Day Theme',\r\n\tcomponent: VrKitIconComponent,\r\n\targTypes: {\r\n\t\tsize: {\r\n\t\t\tcontrol: {\r\n\t\t\t\ttype: 'range',\r\n\t\t\t},\r\n\t\t},\r\n\t\tcolor: {\r\n\t\t\tcontrol: {\r\n\t\t\t\ttype: 'color',\r\n\t\t\t},\r\n\t\t},\r\n\t},\r\n\tdecorators: [\r\n\t\tmoduleMetadata({\r\n\t\t\timports: [MatTooltipModule],\r\n\t\t}),\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t(story) =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-day\" style=\"padding: 30px; background-color: #f5f5f5;\">${story}</div>`\r\n\t\t),\r\n\t],\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/icon/icon-night.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<VrKitIconComponent>",
+                "defaultValue": "{\r\n\ttitle: 'Components/Icon/Night Theme',\r\n\tcomponent: VrKitIconComponent,\r\n\tdecorators: [\r\n\t\tmoduleMetadata({\r\n\t\t\timports: [MatTooltipModule],\r\n\t\t}),\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t(story) =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-night\" style=\"padding: 30px; background-color: #404040;\">${story}</div>`\r\n\t\t),\r\n\t],\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/no-data/no-data-day.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<NoDataComponent>",
+                "defaultValue": "{\r\n\ttitle: 'Example/No Data/Day Theme',\r\n\tcomponent: NoDataComponent,\r\n\tdecorators: [\r\n\t\tmoduleMetadata({\r\n\t\t\timports: [MatTooltipModule],\r\n\t\t}),\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t(story) =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-day\" style=\"padding: 30px; background-color: #f5f5f5;\">${story}</div>`\r\n\t\t),\r\n\t],\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/no-data/no-data-night.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<NoDataComponent>",
+                "defaultValue": "{\r\n\ttitle: 'Example/No Data/Night Theme',\r\n\tcomponent: NoDataComponent,\r\n\tdecorators: [\r\n\t\tmoduleMetadata({\r\n\t\t\timports: [MatTooltipModule],\r\n\t\t}),\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t(story) =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-night\" style=\"padding: 30px; background-color: #404040;\">${story}</div>`\r\n\t\t),\r\n\t],\r\n}"
             },
             {
                 "name": "navigationItems",
@@ -131,26 +191,6 @@
                 "defaultValue": "{\r\n  parameters: {\r\n    controls: {\r\n      matchers: {\r\n       color: /(background|color)$/i,\r\n       date: /Date$/i,\r\n      },\r\n    },\r\n  },\r\n}"
             },
             {
-                "name": "Static",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/vr-lib/src/lib/components/legacy/label/label-day.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n\trender: (args) => ({\r\n\t\tprops: args,\r\n\t\ttemplate: `<div>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit COLOR'\" [color]=\"'#00a14as'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit COLORKEY'\" [colorKey]=\"'--blue30'\"></storybook-label>\r\n\t\t</div>`,\r\n\t}),\r\n}"
-            },
-            {
-                "name": "Static",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/vr-lib/src/lib/components/legacy/label/label-night.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n\trender: (args) => ({\r\n\t\tprops: args,\r\n\t\ttemplate: `<div>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit COLOR'\" [color]=\"'#d1e7c1'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit COLORKEY'\" [colorKey]=\"'--blue30'\"></storybook-label>\r\n\t\t</div>`,\r\n\t}),\r\n}"
-            },
-            {
                 "name": "steps",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -161,6 +201,26 @@
                 "defaultValue": "[\r\n    { displayName: 'Mora C', active: true },\r\n    { displayName: 'Rattvik', active: true },\r\n    { displayName: 'Leksand', active: false },\r\n    { displayName: 'Djuras', active: false },\r\n]"
             },
             {
+                "name": "template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/icon/icon-day.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "iconPaths\r\n\t.map(\r\n\t\t(path) =>\r\n\t\t\t`<vr-kit-icon [path]=\"'${path}'\" [color]=\"color\" [size]=\"'36px'\" [tooltipText]=\"'${path}'\"></vr-kit-icon>`\r\n\t)\r\n\t.join(' ')"
+            },
+            {
+                "name": "template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/icon/icon-night.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "iconPaths\r\n\t.map(\r\n\t\t(path) =>\r\n\t\t\t`<vr-kit-icon [path]=\"'${path}'\" [color]=\"color\" [size]=\"'36px'\" [tooltipText]=\"'${path}'\"></vr-kit-icon>`\r\n\t)\r\n\t.join(' ')"
+            },
+            {
                 "name": "Transparent",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -169,26 +229,6 @@
                 "deprecationMessage": "",
                 "type": "StoryObj<VrKitArticleComponent>",
                 "defaultValue": "{\r\n  args: {\r\n    display: 'transparent',\r\n    title: 'Transparent Article',\r\n  },\r\n}"
-            },
-            {
-                "name": "Types",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/vr-lib/src/lib/components/legacy/label/label-day.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n\trender: (args) => ({\r\n\t\tprops: args,\r\n\t\ttemplate: `<div>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H1'\" [type]=\"'H1'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H3'\" [type]=\"'H3'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H4'\" [type]=\"'H4'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H2bold'\" [type]=\"'H2bold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H3bold'\" [type]=\"'H3bold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H4bold'\" [type]=\"'H4bold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H5bold'\" [type]=\"'H5bold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H2semibold'\" [type]=\"'H2semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H3semibold'\" [type]=\"'H3semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H4semibold'\" [type]=\"'H4semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H5semibold'\" [type]=\"'H5semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet TitleBig'\" [type]=\"'TitleBig'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet TitleMedium'\" [type]=\"'TitleMedium'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet TitleSmall'\" [type]=\"'TitleSmall'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet DescriptionNo'\" [type]=\"'DescriptionNo'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet DescriptionNoSmall'\" [type]=\"'DescriptionNoSmall'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main1'\" [type]=\"'Main1'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main2'\" [type]=\"'Main2'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main3'\" [type]=\"'Main3'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main4'\" [type]=\"'Main4'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main5'\" [type]=\"'Main5'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main1semibold'\" [type]=\"'Main1semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main2semibold'\" [type]=\"'Main2semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main3semibold'\" [type]=\"'Main3semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main4semibold'\" [type]=\"'Main4semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet TableDescription'\" [type]=\"'TableDescription'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Table'\" [type]=\"'Table'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet BottomMenu'\" [type]=\"'BottomMenu'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet BottomMenuSemibold'\" [type]=\"'BottomMenuSemibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet HamburgerMenu'\" [type]=\"'HamburgerMenu'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Input'\" [type]=\"'Input'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet InputDescription'\" [type]=\"'InputDescription'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet InputError'\" [type]=\"'InputError'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet MainButton'\" [type]=\"'MainButton'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet MainButtonSmall'\" [type]=\"'MainButtonSmall'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet MainButtonMedium'\" [type]=\"'MainButtonMedium'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet SecondaryButton'\" [type]=\"'SecondaryButton'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet SecondaryButtonSmall'\" [type]=\"'SecondaryButtonSmall'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet NotificationBubble'\" [type]=\"'NotificationBubble'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet NumberInIcon'\" [type]=\"'NumberInIcon'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet TrainNumber'\" [type]=\"'TrainNumber'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet TrainNumberSemibold'\" [type]=\"'TrainNumberSemibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet InfoLabels'\" [type]=\"'InfoLabels'\"></storybook-label>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet DeletedHour'\" [type]=\"'DeletedHour'\"></storybook-label>\r\n\t\t</div>`,\r\n\t}),\r\n}"
-            },
-            {
-                "name": "Types",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/vr-lib/src/lib/components/legacy/label/label-night.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n\trender: (args) => ({\r\n\t\tprops: args,\r\n\t\ttemplate: `<div>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H1'\" [type]=\"'H1'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H3'\" [type]=\"'H3'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H4'\" [type]=\"'H4'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H2bold'\" [type]=\"'H2bold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H3bold'\" [type]=\"'H3bold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H4bold'\" [type]=\"'H4bold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H5bold'\" [type]=\"'H5bold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H2semibold'\" [type]=\"'H2semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H3semibold'\" [type]=\"'H3semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H4semibold'\" [type]=\"'H4semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H5semibold'\" [type]=\"'H5semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet TitleBig'\" [type]=\"'TitleBig'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet TitleMedium'\" [type]=\"'TitleMedium'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet TitleSmall'\" [type]=\"'TitleSmall'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet DescriptionNo'\" [type]=\"'DescriptionNo'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet DescriptionNoSmall'\" [type]=\"'DescriptionNoSmall'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main1'\" [type]=\"'Main1'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main2'\" [type]=\"'Main2'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main3'\" [type]=\"'Main3'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main4'\" [type]=\"'Main4'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main5'\" [type]=\"'Main5'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main1semibold'\" [type]=\"'Main1semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main2semibold'\" [type]=\"'Main2semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main3semibold'\" [type]=\"'Main3semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main4semibold'\" [type]=\"'Main4semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet TableDescription'\" [type]=\"'TableDescription'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Table'\" [type]=\"'Table'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet BottomMenu'\" [type]=\"'BottomMenu'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet BottomMenuSemibold'\" [type]=\"'BottomMenuSemibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet HamburgerMenu'\" [type]=\"'HamburgerMenu'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Input'\" [type]=\"'Input'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet InputDescription'\" [type]=\"'InputDescription'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet InputError'\" [type]=\"'InputError'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet MainButton'\" [type]=\"'MainButton'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet MainButtonSmall'\" [type]=\"'MainButtonSmall'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet MainButtonMedium'\" [type]=\"'MainButtonMedium'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet SecondaryButton'\" [type]=\"'SecondaryButton'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet SecondaryButtonSmall'\" [type]=\"'SecondaryButtonSmall'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet NotificationBubble'\" [type]=\"'NotificationBubble'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet NumberInIcon'\" [type]=\"'NumberInIcon'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet TrainNumber'\" [type]=\"'TrainNumber'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet TrainNumberSemibold'\" [type]=\"'TrainNumberSemibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet InfoLabels'\" [type]=\"'InfoLabels'\"></storybook-label>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet DeletedHour'\" [type]=\"'DeletedHour'\"></storybook-label>\r\n\t\t</div>`,\r\n\t}),\r\n}"
             },
             {
                 "name": "userInfo",
@@ -209,6 +249,26 @@
                 "deprecationMessage": "",
                 "type": "StoryObj<VrKitArticleComponent>",
                 "defaultValue": "{\r\n  args: {\r\n    display: 'white',\r\n    title: 'White Article',\r\n  },\r\n}"
+            },
+            {
+                "name": "WithSubText",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/no-data/no-data-day.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n\targs: {\r\n\t\tsubLabel: 'This is little subText',\r\n\t},\r\n}"
+            },
+            {
+                "name": "WithSubText",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/no-data/no-data-night.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n\targs: {\r\n\t\tsubLabel: 'This is little subText',\r\n\t},\r\n}"
             }
         ],
         "functions": [],
@@ -239,8 +299,8 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<LabelComponent>",
-                "file": "projects/vr-lib/src/lib/components/legacy/label/label-day.stories.ts",
+                "rawtype": "StoryObj<VrKitIconComponent>",
+                "file": "projects/vr-lib/src/lib/components/icon/icon-day.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -250,8 +310,30 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
-                "rawtype": "StoryObj<LabelComponent>",
-                "file": "projects/vr-lib/src/lib/components/legacy/label/label-night.stories.ts",
+                "rawtype": "StoryObj<VrKitIconComponent>",
+                "file": "projects/vr-lib/src/lib/components/icon/icon-night.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<NoDataComponent>",
+                "file": "projects/vr-lib/src/lib/components/no-data/no-data-day.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<NoDataComponent>",
+                "file": "projects/vr-lib/src/lib/components/no-data/no-data-night.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -260,6 +342,70 @@
         ],
         "enumerations": [],
         "groupedVariables": {
+            "projects/vr-lib/src/lib/components/no-data/no-data-day.stories.ts": [
+                {
+                    "name": "Basic",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/no-data/no-data-day.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n\targs: {},\r\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/no-data/no-data-day.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<NoDataComponent>",
+                    "defaultValue": "{\r\n\ttitle: 'Example/No Data/Day Theme',\r\n\tcomponent: NoDataComponent,\r\n\tdecorators: [\r\n\t\tmoduleMetadata({\r\n\t\t\timports: [MatTooltipModule],\r\n\t\t}),\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t(story) =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-day\" style=\"padding: 30px; background-color: #f5f5f5;\">${story}</div>`\r\n\t\t),\r\n\t],\r\n}"
+                },
+                {
+                    "name": "WithSubText",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/no-data/no-data-day.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n\targs: {\r\n\t\tsubLabel: 'This is little subText',\r\n\t},\r\n}"
+                }
+            ],
+            "projects/vr-lib/src/lib/components/no-data/no-data-night.stories.ts": [
+                {
+                    "name": "Basic",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/no-data/no-data-night.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n\targs: {},\r\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/no-data/no-data-night.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<NoDataComponent>",
+                    "defaultValue": "{\r\n\ttitle: 'Example/No Data/Night Theme',\r\n\tcomponent: NoDataComponent,\r\n\tdecorators: [\r\n\t\tmoduleMetadata({\r\n\t\t\timports: [MatTooltipModule],\r\n\t\t}),\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t(story) =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-night\" style=\"padding: 30px; background-color: #404040;\">${story}</div>`\r\n\t\t),\r\n\t],\r\n}"
+                },
+                {
+                    "name": "WithSubText",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/no-data/no-data-night.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n\targs: {\r\n\t\tsubLabel: 'This is little subText',\r\n\t},\r\n}"
+                }
+            ],
             "projects/vr-lib/src/lib/components/article/article.stories.ts": [
                 {
                     "name": "Default",
@@ -390,68 +536,68 @@
                     "defaultValue": "[\r\n    { displayName: 'Mora C', active: true },\r\n    { displayName: 'Rattvik', active: true },\r\n    { displayName: 'Leksand', active: false },\r\n    { displayName: 'Djuras', active: false },\r\n]"
                 }
             ],
-            "projects/vr-lib/src/lib/components/legacy/label/label-day.stories.ts": [
+            "projects/vr-lib/src/lib/components/icon/icon-day.stories.ts": [
+                {
+                    "name": "IconList",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/icon/icon-day.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n\trender: (args) => ({\r\n\t\tprops: args,\r\n\t\ttemplate: `<div style=\"display:flex; flex-wrap: wrap; gap: 20px;\">${template}</div>`,\r\n\t}),\r\n}"
+                },
                 {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/vr-lib/src/lib/components/legacy/label/label-day.stories.ts",
+                    "file": "projects/vr-lib/src/lib/components/icon/icon-day.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Meta<LabelComponent>",
-                    "defaultValue": "{\r\n\ttitle: 'Example/Label/Day Theme',\r\n\tcomponent: LabelComponent,\r\n\tdecorators: [\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t(story) =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-day\" style=\"padding: 30px; background-color: #f5f5f5;\">${story}</div>`\r\n\t\t),\r\n\t],\r\n}"
+                    "type": "Meta<VrKitIconComponent>",
+                    "defaultValue": "{\r\n\ttitle: 'Components/Icon/Day Theme',\r\n\tcomponent: VrKitIconComponent,\r\n\targTypes: {\r\n\t\tsize: {\r\n\t\t\tcontrol: {\r\n\t\t\t\ttype: 'range',\r\n\t\t\t},\r\n\t\t},\r\n\t\tcolor: {\r\n\t\t\tcontrol: {\r\n\t\t\t\ttype: 'color',\r\n\t\t\t},\r\n\t\t},\r\n\t},\r\n\tdecorators: [\r\n\t\tmoduleMetadata({\r\n\t\t\timports: [MatTooltipModule],\r\n\t\t}),\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t(story) =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-day\" style=\"padding: 30px; background-color: #f5f5f5;\">${story}</div>`\r\n\t\t),\r\n\t],\r\n}"
                 },
                 {
-                    "name": "Static",
+                    "name": "template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/vr-lib/src/lib/components/legacy/label/label-day.stories.ts",
+                    "file": "projects/vr-lib/src/lib/components/icon/icon-day.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n\trender: (args) => ({\r\n\t\tprops: args,\r\n\t\ttemplate: `<div>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit COLOR'\" [color]=\"'#00a14as'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit COLORKEY'\" [colorKey]=\"'--blue30'\"></storybook-label>\r\n\t\t</div>`,\r\n\t}),\r\n}"
-                },
-                {
-                    "name": "Types",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/vr-lib/src/lib/components/legacy/label/label-day.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n\trender: (args) => ({\r\n\t\tprops: args,\r\n\t\ttemplate: `<div>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H1'\" [type]=\"'H1'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H3'\" [type]=\"'H3'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H4'\" [type]=\"'H4'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H2bold'\" [type]=\"'H2bold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H3bold'\" [type]=\"'H3bold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H4bold'\" [type]=\"'H4bold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H5bold'\" [type]=\"'H5bold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H2semibold'\" [type]=\"'H2semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H3semibold'\" [type]=\"'H3semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H4semibold'\" [type]=\"'H4semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H5semibold'\" [type]=\"'H5semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet TitleBig'\" [type]=\"'TitleBig'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet TitleMedium'\" [type]=\"'TitleMedium'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet TitleSmall'\" [type]=\"'TitleSmall'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet DescriptionNo'\" [type]=\"'DescriptionNo'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet DescriptionNoSmall'\" [type]=\"'DescriptionNoSmall'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main1'\" [type]=\"'Main1'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main2'\" [type]=\"'Main2'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main3'\" [type]=\"'Main3'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main4'\" [type]=\"'Main4'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main5'\" [type]=\"'Main5'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main1semibold'\" [type]=\"'Main1semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main2semibold'\" [type]=\"'Main2semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main3semibold'\" [type]=\"'Main3semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main4semibold'\" [type]=\"'Main4semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet TableDescription'\" [type]=\"'TableDescription'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Table'\" [type]=\"'Table'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet BottomMenu'\" [type]=\"'BottomMenu'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet BottomMenuSemibold'\" [type]=\"'BottomMenuSemibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet HamburgerMenu'\" [type]=\"'HamburgerMenu'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Input'\" [type]=\"'Input'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet InputDescription'\" [type]=\"'InputDescription'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet InputError'\" [type]=\"'InputError'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet MainButton'\" [type]=\"'MainButton'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet MainButtonSmall'\" [type]=\"'MainButtonSmall'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet MainButtonMedium'\" [type]=\"'MainButtonMedium'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet SecondaryButton'\" [type]=\"'SecondaryButton'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet SecondaryButtonSmall'\" [type]=\"'SecondaryButtonSmall'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet NotificationBubble'\" [type]=\"'NotificationBubble'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet NumberInIcon'\" [type]=\"'NumberInIcon'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet TrainNumber'\" [type]=\"'TrainNumber'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet TrainNumberSemibold'\" [type]=\"'TrainNumberSemibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet InfoLabels'\" [type]=\"'InfoLabels'\"></storybook-label>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet DeletedHour'\" [type]=\"'DeletedHour'\"></storybook-label>\r\n\t\t</div>`,\r\n\t}),\r\n}"
+                    "type": "",
+                    "defaultValue": "iconPaths\r\n\t.map(\r\n\t\t(path) =>\r\n\t\t\t`<vr-kit-icon [path]=\"'${path}'\" [color]=\"color\" [size]=\"'36px'\" [tooltipText]=\"'${path}'\"></vr-kit-icon>`\r\n\t)\r\n\t.join(' ')"
                 }
             ],
-            "projects/vr-lib/src/lib/components/legacy/label/label-night.stories.ts": [
+            "projects/vr-lib/src/lib/components/icon/icon-night.stories.ts": [
+                {
+                    "name": "IconList",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/icon/icon-night.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n\trender: (args) => ({\r\n\t\tprops: args,\r\n\t\ttemplate: `<div style=\"display:flex; flex-wrap: wrap; gap: 20px;\">${template}</div>`,\r\n\t}),\r\n}"
+                },
                 {
                     "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/vr-lib/src/lib/components/legacy/label/label-night.stories.ts",
+                    "file": "projects/vr-lib/src/lib/components/icon/icon-night.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Meta<LabelComponent>",
-                    "defaultValue": "{\r\n\ttitle: 'Example/Label/Night Theme',\r\n\tcomponent: LabelComponent,\r\n\tdecorators: [\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t(story) =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-night\" style=\"padding: 30px; background-color: #404040;\">${story}</div>`\r\n\t\t),\r\n\t],\r\n}"
+                    "type": "Meta<VrKitIconComponent>",
+                    "defaultValue": "{\r\n\ttitle: 'Components/Icon/Night Theme',\r\n\tcomponent: VrKitIconComponent,\r\n\tdecorators: [\r\n\t\tmoduleMetadata({\r\n\t\t\timports: [MatTooltipModule],\r\n\t\t}),\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t(story) =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-night\" style=\"padding: 30px; background-color: #404040;\">${story}</div>`\r\n\t\t),\r\n\t],\r\n}"
                 },
                 {
-                    "name": "Static",
+                    "name": "template",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/vr-lib/src/lib/components/legacy/label/label-night.stories.ts",
+                    "file": "projects/vr-lib/src/lib/components/icon/icon-night.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n\trender: (args) => ({\r\n\t\tprops: args,\r\n\t\ttemplate: `<div>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit COLOR'\" [color]=\"'#d1e7c1'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit COLORKEY'\" [colorKey]=\"'--blue30'\"></storybook-label>\r\n\t\t</div>`,\r\n\t}),\r\n}"
-                },
-                {
-                    "name": "Types",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/vr-lib/src/lib/components/legacy/label/label-night.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "Story",
-                    "defaultValue": "{\r\n\trender: (args) => ({\r\n\t\tprops: args,\r\n\t\ttemplate: `<div>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H1'\" [type]=\"'H1'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H3'\" [type]=\"'H3'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H4'\" [type]=\"'H4'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H2bold'\" [type]=\"'H2bold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H3bold'\" [type]=\"'H3bold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H4bold'\" [type]=\"'H4bold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H5bold'\" [type]=\"'H5bold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H2semibold'\" [type]=\"'H2semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H3semibold'\" [type]=\"'H3semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H4semibold'\" [type]=\"'H4semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet H5semibold'\" [type]=\"'H5semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet TitleBig'\" [type]=\"'TitleBig'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet TitleMedium'\" [type]=\"'TitleMedium'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet TitleSmall'\" [type]=\"'TitleSmall'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet DescriptionNo'\" [type]=\"'DescriptionNo'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet DescriptionNoSmall'\" [type]=\"'DescriptionNoSmall'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main1'\" [type]=\"'Main1'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main2'\" [type]=\"'Main2'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main3'\" [type]=\"'Main3'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main4'\" [type]=\"'Main4'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main5'\" [type]=\"'Main5'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main1semibold'\" [type]=\"'Main1semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main2semibold'\" [type]=\"'Main2semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main3semibold'\" [type]=\"'Main3semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Main4semibold'\" [type]=\"'Main4semibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet TableDescription'\" [type]=\"'TableDescription'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Table'\" [type]=\"'Table'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet BottomMenu'\" [type]=\"'BottomMenu'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet BottomMenuSemibold'\" [type]=\"'BottomMenuSemibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet HamburgerMenu'\" [type]=\"'HamburgerMenu'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet Input'\" [type]=\"'Input'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet InputDescription'\" [type]=\"'InputDescription'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet InputError'\" [type]=\"'InputError'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet MainButton'\" [type]=\"'MainButton'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet MainButtonSmall'\" [type]=\"'MainButtonSmall'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet MainButtonMedium'\" [type]=\"'MainButtonMedium'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet SecondaryButton'\" [type]=\"'SecondaryButton'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet SecondaryButtonSmall'\" [type]=\"'SecondaryButtonSmall'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet NotificationBubble'\" [type]=\"'NotificationBubble'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet NumberInIcon'\" [type]=\"'NumberInIcon'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet TrainNumber'\" [type]=\"'TrainNumber'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet TrainNumberSemibold'\" [type]=\"'TrainNumberSemibold'\"></storybook-label><br><br>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet InfoLabels'\" [type]=\"'InfoLabels'\"></storybook-label>\r\n\t\t\t<storybook-label [content]=\"'Lorem ipsum dolor sit amet DeletedHour'\" [type]=\"'DeletedHour'\"></storybook-label>\r\n\t\t</div>`,\r\n\t}),\r\n}"
+                    "type": "",
+                    "defaultValue": "iconPaths\r\n\t.map(\r\n\t\t(path) =>\r\n\t\t\t`<vr-kit-icon [path]=\"'${path}'\" [color]=\"color\" [size]=\"'36px'\" [tooltipText]=\"'${path}'\"></vr-kit-icon>`\r\n\t)\r\n\t.join(' ')"
                 }
             ],
             "projects/vr-lib/src/lib/material-overview/material-overview.stories.ts": [
@@ -508,26 +654,52 @@
                     "kind": 183
                 }
             ],
-            "projects/vr-lib/src/lib/components/legacy/label/label-day.stories.ts": [
+            "projects/vr-lib/src/lib/components/icon/icon-day.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<LabelComponent>",
-                    "file": "projects/vr-lib/src/lib/components/legacy/label/label-day.stories.ts",
+                    "rawtype": "StoryObj<VrKitIconComponent>",
+                    "file": "projects/vr-lib/src/lib/components/icon/icon-day.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
                     "kind": 183
                 }
             ],
-            "projects/vr-lib/src/lib/components/legacy/label/label-night.stories.ts": [
+            "projects/vr-lib/src/lib/components/icon/icon-night.stories.ts": [
                 {
                     "name": "Story",
                     "ctype": "miscellaneous",
                     "subtype": "typealias",
-                    "rawtype": "StoryObj<LabelComponent>",
-                    "file": "projects/vr-lib/src/lib/components/legacy/label/label-night.stories.ts",
+                    "rawtype": "StoryObj<VrKitIconComponent>",
+                    "file": "projects/vr-lib/src/lib/components/icon/icon-night.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/vr-lib/src/lib/components/no-data/no-data-day.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<NoDataComponent>",
+                    "file": "projects/vr-lib/src/lib/components/no-data/no-data-day.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/vr-lib/src/lib/components/no-data/no-data-night.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<NoDataComponent>",
+                    "file": "projects/vr-lib/src/lib/components/no-data/no-data-night.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -656,7 +828,17 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/vr-lib/src/lib/components/legacy/label/label-day.stories.ts",
+                "filePath": "projects/vr-lib/src/lib/components/icon/icon-day.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "IconList",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/icon/icon-day.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -666,27 +848,17 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/vr-lib/src/lib/components/legacy/label/label-day.stories.ts",
+                "filePath": "projects/vr-lib/src/lib/components/icon/icon-day.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Static",
+                "name": "template",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "projects/vr-lib/src/lib/components/legacy/label/label-day.stories.ts",
-                "type": "variable",
-                "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Types",
-                "coveragePercent": 0,
-                "coverageCount": "0/1",
-                "status": "low"
-            },
-            {
-                "filePath": "projects/vr-lib/src/lib/components/legacy/label/label-day.stories.ts",
+                "filePath": "projects/vr-lib/src/lib/components/icon/icon-day.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",
@@ -696,7 +868,17 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/vr-lib/src/lib/components/legacy/label/label-night.stories.ts",
+                "filePath": "projects/vr-lib/src/lib/components/icon/icon-night.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "IconList",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/icon/icon-night.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
@@ -706,27 +888,97 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/vr-lib/src/lib/components/legacy/label/label-night.stories.ts",
+                "filePath": "projects/vr-lib/src/lib/components/icon/icon-night.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
-                "name": "Static",
+                "name": "template",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "projects/vr-lib/src/lib/components/legacy/label/label-night.stories.ts",
-                "type": "variable",
+                "filePath": "projects/vr-lib/src/lib/components/icon/icon-night.stories.ts",
+                "type": "type alias",
                 "linktype": "miscellaneous",
-                "linksubtype": "variable",
-                "name": "Types",
+                "linksubtype": "typealias",
+                "name": "Story",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
             },
             {
-                "filePath": "projects/vr-lib/src/lib/components/legacy/label/label-night.stories.ts",
+                "filePath": "projects/vr-lib/src/lib/components/no-data/no-data-day.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Basic",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/no-data/no-data-day.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/no-data/no-data-day.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "WithSubText",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/no-data/no-data-day.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/no-data/no-data-night.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Basic",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/no-data/no-data-night.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/no-data/no-data-night.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "WithSubText",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/no-data/no-data-night.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",

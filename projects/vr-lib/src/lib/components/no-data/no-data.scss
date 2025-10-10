@@ -1,0 +1,14 @@
+.no-data {
+	color: var(--grey20-white);
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
+	width: 100%;
+	gap: 6px;
+	h2, h4 {
+		margin: 0;
+	}
+}

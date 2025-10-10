@@ -7,3 +7,5 @@ export { VrKitPageHeaderComponent } from './lib/components/page-header/page-head
 export { VrKitBreadcrumbComponent } from './lib/components/breadcrumb/breadcrumb.component';
 export { VrKitArticleComponent } from './lib/components/article/article.component';
 export { VrKitStepperComponent } from './lib/components/stepper/stepper.component';
+export { VrKitIconComponent } from './lib/components/icon/icon.component';
+export { VrKitNoDataComponent } from './lib/components/no-data/no-data.component';

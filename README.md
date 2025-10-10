@@ -1,6 +1,12 @@
 # VrLib
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.0.
+## Development server
+
+To start a local storybook, run:
+
+```bash
+ng run vr-lib:storybook
+```
 
 ## Code scaffolding
 
@@ -16,28 +22,24 @@ For a complete list of available schematics (such as `components`, `directives`,
 ng generate --help
 ```
 
-## Building
+### Publishing the Library
 
-To build the library, run:
+Once the project is built, you can publish your library by following these steps:
+
+1. To build the library, run:
 
 ```bash
 ng build vr-lib
 ```
 
-This command will compile your project, and the build artifacts will be placed in the `dist/` directory.
-
-### Publishing the Library
-
-Once the project is built, you can publish your library by following these steps:
-
-1. Navigate to the `dist` directory:
-   ```bash
-   cd dist/vr-lib
-   ```
-
-2. compile css to dist folder
+2. This command will compile your project, and the build artifacts will be placed in the `dist/` directory.
    ```bash
    npx sass --load-path=node_modules projects/vr-lib/src/lib/styles/styles.scss dist/vr-lib/styles.css
+   ```
+
+2. Navigate to the `dist` directory:
+   ```bash
+   cd dist/vr-lib
    ```
 
 3. Login to npm (if not already logged in):

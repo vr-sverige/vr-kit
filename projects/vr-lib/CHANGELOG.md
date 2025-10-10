@@ -17,3 +17,8 @@
 ### Added
 - article component
 - stepper component
+
+## [0.0.56] - 2025-10-10
+### Added
+- icon component
+- no-data component

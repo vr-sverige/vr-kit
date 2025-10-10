@@ -18,7 +18,7 @@
             @for (district of districts; track district) {
             <li class="district-item">
                 <span class="material-icons-outlined"
-                    [ngClass]="{ 'active': currentDistrictIds?.includes(district.id) }">check</span>
+                    [ngClass]="{ 'active': currentDistrictIds.includes(district.id) }">check</span>
                 <button (click)="districtChanged([district])" class="district-change-button">
                     {{ district.name }}
                 </button>

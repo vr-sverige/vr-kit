@@ -1,6 +1,6 @@
 {
   "name": "vr-kit",
-  "version": "0.0.55",
+  "version": "0.0.56",
   "changelog": "CHANGELOG.md",
   "author": "vrsverige",
   "description": "A library of Angular components for building VR applications.",
