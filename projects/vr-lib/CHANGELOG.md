@@ -22,3 +22,7 @@
 ### Added
 - icon component
 - no-data component
+
+## [0.0.6] - 2025-10-20
+### Added
+- dark mode

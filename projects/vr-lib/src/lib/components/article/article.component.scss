@@ -5,14 +5,16 @@
   flex-direction: column;
   gap: 8px;
   &--sheet {
-    background-color: white;
+    background-color: var(--white-grey20);
+    color: var(--black-white);
     border-radius: 5px;
-    border: 1px solid #E7E7E7;
-    padding: 24px;
+    border: 1px solid var(--grey70-grey40);
+    padding: 22px;
   }
   &--white {
-    background-color: white;
-		padding: 24px;
+    background-color: var(--white-grey20);
+    color: var(--black-white);
+		padding: 22px;
 		border: none;
     margin: 0;
 		gap: 0;
@@ -20,9 +22,10 @@
   }
 	&--transparent {
 		background-color: transparent;
+    color: var(--black-white);
 		padding: 0;
 		border: none;
-		margin: 24px 24px;
+		margin: 22px;
 		gap: 0;
 	}
   &__header {

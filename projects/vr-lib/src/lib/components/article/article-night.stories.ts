@@ -1,13 +1,18 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
 import { VrKitArticleComponent } from './article.component';
+import { componentWrapperDecorator } from '@storybook/angular';
 
 export default {
-  title: 'Components/Article',
+  title: 'Components/Article/Night',
   component: VrKitArticleComponent,
   decorators: [
     moduleMetadata({
       imports: [VrKitArticleComponent],
     }),
+    componentWrapperDecorator(
+			(story) =>
+				`<div id="storywrapper" class="vr-theme theme-night" style="padding: 30px; background-color: #404040;">${story}</div>`
+		),
   ],
   argTypes: {
     display: {
