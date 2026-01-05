@@ -12,6 +12,7 @@
     <button class="menu__button" [matMenuTriggerFor]="districtMenu">
         <span class="material-icons-outlined">place</span>
         {{ getCurrentDistrictName() }}
+        <span class="material-icons-outlined chevron-icon" aria-hidden="true">keyboard_arrow_down</span>
     </button>
     <mat-menu #districtMenu="matMenu">
         <dl class="menu__list">
@@ -32,6 +33,7 @@
     <button class="menu__button" [matMenuTriggerFor]="menu">
         <span class="material-icons-outlined">person</span>
         {{ userInfoModel.name }}
+        <span class="material-icons-outlined chevron-icon" aria-hidden="true">keyboard_arrow_down</span>
     </button>
     <mat-menu #menu="matMenu">
         <dl class="menu__list">
