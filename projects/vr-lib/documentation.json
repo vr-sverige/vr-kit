@@ -54,16 +54,6 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/vr-lib/src/lib/components/header/header.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Story",
-                "defaultValue": "{\r\n  args: {\r\n    navigationItems,\r\n    districts,\r\n    currentDistrictIds: [1],\r\n    userInfoModel: userInfo,\r\n  },\r\n}"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -74,11 +64,11 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/vr-lib/src/lib/components/page-header/page-header.stories.ts",
+                "file": "projects/vr-lib/src/lib/components/header/header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "StoryObj<VrKitPageHeaderComponent>",
-                "defaultValue": "{\r\n  args: {\r\n    title: 'Dashboard',\r\n    breadcrumbList: [\r\n      { label: 'Home', url: '/' },\r\n      { label: 'Dashboard', url: '/dashboard' },\r\n    ],\r\n  },\r\n}"
+                "type": "Story",
+                "defaultValue": "{\r\n  args: {\r\n    navigationItems,\r\n    districts,\r\n    currentDistrictIds: [1],\r\n    userInfoModel: userInfo,\r\n  },\r\n}"
             },
             {
                 "name": "Default",
@@ -89,6 +79,26 @@
                 "deprecationMessage": "",
                 "type": "StoryObj<VrKitStepperComponent>",
                 "defaultValue": "{\r\n  args: {\r\n    items: steps,\r\n  },\r\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/page-header/page-header-day.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "StoryObj<VrKitPageHeaderComponent>",
+                "defaultValue": "{\r\n  args: {\r\n    title: 'Dashboard',\r\n    breadcrumbList: [\r\n      { label: 'Home', url: '/' },\r\n      { label: 'Dashboard', url: '/dashboard' },\r\n    ],\r\n  },\r\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/page-header/page-header-night.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "StoryObj<VrKitPageHeaderComponent>",
+                "defaultValue": "{\r\n  args: {\r\n    title: 'Dashboard',\r\n    breadcrumbList: [\r\n      { label: 'Home', url: '/' },\r\n      { label: 'Dashboard', url: '/dashboard' },\r\n    ],\r\n  },\r\n}"
             },
             {
                 "name": "districts",
@@ -134,26 +144,6 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/vr-lib/src/lib/components/icon/icon-day.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<VrKitIconComponent>",
-                "defaultValue": "{\r\n\ttitle: 'Components/Icon/Day Theme',\r\n\tcomponent: VrKitIconComponent,\r\n\targTypes: {\r\n\t\tsize: {\r\n\t\t\tcontrol: {\r\n\t\t\t\ttype: 'range',\r\n\t\t\t},\r\n\t\t},\r\n\t\tcolor: {\r\n\t\t\tcontrol: {\r\n\t\t\t\ttype: 'color',\r\n\t\t\t},\r\n\t\t},\r\n\t},\r\n\tdecorators: [\r\n\t\tmoduleMetadata({\r\n\t\t\timports: [MatTooltipModule],\r\n\t\t}),\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t(story) =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-day\" style=\"padding: 30px; background-color: #f5f5f5;\">${story}</div>`\r\n\t\t),\r\n\t],\r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/vr-lib/src/lib/components/icon/icon-night.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "Meta<VrKitIconComponent>",
-                "defaultValue": "{\r\n\ttitle: 'Components/Icon/Night Theme',\r\n\tcomponent: VrKitIconComponent,\r\n\tdecorators: [\r\n\t\tmoduleMetadata({\r\n\t\t\timports: [MatTooltipModule],\r\n\t\t}),\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t(story) =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-night\" style=\"padding: 30px; background-color: #404040;\">${story}</div>`\r\n\t\t),\r\n\t],\r\n}"
-            },
-            {
-                "name": "meta",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
                 "file": "projects/vr-lib/src/lib/components/no-data/no-data-day.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -169,6 +159,26 @@
                 "deprecationMessage": "",
                 "type": "Meta<VrKitNoDataComponent>",
                 "defaultValue": "{\r\n\ttitle: 'Components/No Data/Night Theme',\r\n\tcomponent: VrKitNoDataComponent,\r\n\tdecorators: [\r\n\t\tmoduleMetadata({\r\n\t\t\timports: [MatTooltipModule],\r\n\t\t}),\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t(story) =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-night\" style=\"padding: 30px; background-color: #404040;\">${story}</div>`\r\n\t\t),\r\n\t],\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/icon/icon-day.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<VrKitIconComponent>",
+                "defaultValue": "{\r\n\ttitle: 'Components/Icon/Day Theme',\r\n\tcomponent: VrKitIconComponent,\r\n\targTypes: {\r\n\t\tsize: {\r\n\t\t\tcontrol: {\r\n\t\t\t\ttype: 'range',\r\n\t\t\t},\r\n\t\t},\r\n\t\tcolor: {\r\n\t\t\tcontrol: {\r\n\t\t\t\ttype: 'color',\r\n\t\t\t},\r\n\t\t},\r\n\t},\r\n\tdecorators: [\r\n\t\tmoduleMetadata({\r\n\t\t\timports: [MatTooltipModule],\r\n\t\t}),\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t(story) =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-day\" style=\"padding: 30px; background-color: #f5f5f5;\">${story}</div>`\r\n\t\t),\r\n\t],\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/icon/icon-night.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<VrKitIconComponent>",
+                "defaultValue": "{\r\n\ttitle: 'Components/Icon/Night Theme',\r\n\tcomponent: VrKitIconComponent,\r\n\tdecorators: [\r\n\t\tmoduleMetadata({\r\n\t\t\timports: [MatTooltipModule],\r\n\t\t}),\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t(story) =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-night\" style=\"padding: 30px; background-color: #404040;\">${story}</div>`\r\n\t\t),\r\n\t],\r\n}"
             },
             {
                 "name": "navigationItems",
@@ -318,6 +328,28 @@
                 "name": "Story",
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
+                "rawtype": "StoryObj<VrKitNoDataComponent>",
+                "file": "projects/vr-lib/src/lib/components/no-data/no-data-day.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<VrKitNoDataComponent>",
+                "file": "projects/vr-lib/src/lib/components/no-data/no-data-night.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
                 "rawtype": "StoryObj<VrKitHeaderComponent>",
                 "file": "projects/vr-lib/src/lib/components/header/header.stories.ts",
                 "deprecated": false,
@@ -342,28 +374,6 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<VrKitIconComponent>",
                 "file": "projects/vr-lib/src/lib/components/icon/icon-night.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<VrKitNoDataComponent>",
-                "file": "projects/vr-lib/src/lib/components/no-data/no-data-day.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "description": "",
-                "kind": 183
-            },
-            {
-                "name": "Story",
-                "ctype": "miscellaneous",
-                "subtype": "typealias",
-                "rawtype": "StoryObj<VrKitNoDataComponent>",
-                "file": "projects/vr-lib/src/lib/components/no-data/no-data-night.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -500,6 +510,28 @@
                     "defaultValue": "{\r\n  args: {\r\n    display: 'white',\r\n    title: 'White Article',\r\n  },\r\n}"
                 }
             ],
+            "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "StoryObj<VrKitBreadcrumbComponent>",
+                    "defaultValue": "{\r\n  args: {\r\n    list: exampleList,\r\n  },\r\n}"
+                },
+                {
+                    "name": "exampleList",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "IBreadcrumb[]",
+                    "defaultValue": "[\r\n  { label: 'Home', url: '/' },\r\n  { label: 'Section', url: '/section' },\r\n  { label: 'Page', url: '/section/page' },\r\n]"
+                }
+            ],
             "projects/vr-lib/src/lib/components/header/header.stories.ts": [
                 {
                     "name": "Default",
@@ -542,40 +574,6 @@
                     "defaultValue": "{\r\n  name: 'John Doe',\r\n  emailLabel: 'Email',\r\n  emailContent: 'john.doe@example.com',\r\n  phoneLabel: 'Phone',\r\n  phoneContent: '+123456789',\r\n  districtLabel: 'District',\r\n  districtContent: 'Central',\r\n  roleLabel: 'Role',\r\n  roleContent: ['Admin'],\r\n  logoutLabel: 'Logout',\r\n}"
                 }
             ],
-            "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "StoryObj<VrKitBreadcrumbComponent>",
-                    "defaultValue": "{\r\n  args: {\r\n    list: exampleList,\r\n  },\r\n}"
-                },
-                {
-                    "name": "exampleList",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "IBreadcrumb[]",
-                    "defaultValue": "[\r\n  { label: 'Home', url: '/' },\r\n  { label: 'Section', url: '/section' },\r\n  { label: 'Page', url: '/section/page' },\r\n]"
-                }
-            ],
-            "projects/vr-lib/src/lib/components/page-header/page-header.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/vr-lib/src/lib/components/page-header/page-header.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "StoryObj<VrKitPageHeaderComponent>",
-                    "defaultValue": "{\r\n  args: {\r\n    title: 'Dashboard',\r\n    breadcrumbList: [\r\n      { label: 'Home', url: '/' },\r\n      { label: 'Dashboard', url: '/dashboard' },\r\n    ],\r\n  },\r\n}"
-                }
-            ],
             "projects/vr-lib/src/lib/components/stepper/stepper.stories.ts": [
                 {
                     "name": "Default",
@@ -596,6 +594,30 @@
                     "deprecationMessage": "",
                     "type": "Step[]",
                     "defaultValue": "[\r\n    { displayName: 'Mora C', active: true },\r\n    { displayName: 'Rattvik', active: true },\r\n    { displayName: 'Leksand', active: false },\r\n    { displayName: 'Djuras', active: false },\r\n]"
+                }
+            ],
+            "projects/vr-lib/src/lib/components/page-header/page-header-day.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/page-header/page-header-day.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "StoryObj<VrKitPageHeaderComponent>",
+                    "defaultValue": "{\r\n  args: {\r\n    title: 'Dashboard',\r\n    breadcrumbList: [\r\n      { label: 'Home', url: '/' },\r\n      { label: 'Dashboard', url: '/dashboard' },\r\n    ],\r\n  },\r\n}"
+                }
+            ],
+            "projects/vr-lib/src/lib/components/page-header/page-header-night.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/page-header/page-header-night.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "StoryObj<VrKitPageHeaderComponent>",
+                    "defaultValue": "{\r\n  args: {\r\n    title: 'Dashboard',\r\n    breadcrumbList: [\r\n      { label: 'Home', url: '/' },\r\n      { label: 'Dashboard', url: '/dashboard' },\r\n    ],\r\n  },\r\n}"
                 }
             ],
             "projects/vr-lib/src/lib/components/icon/icon-day.stories.ts": [
@@ -703,6 +725,32 @@
                     "kind": 183
                 }
             ],
+            "projects/vr-lib/src/lib/components/no-data/no-data-day.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<VrKitNoDataComponent>",
+                    "file": "projects/vr-lib/src/lib/components/no-data/no-data-day.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/vr-lib/src/lib/components/no-data/no-data-night.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<VrKitNoDataComponent>",
+                    "file": "projects/vr-lib/src/lib/components/no-data/no-data-night.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
             "projects/vr-lib/src/lib/components/header/header.stories.ts": [
                 {
                     "name": "Story",
@@ -736,32 +784,6 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<VrKitIconComponent>",
                     "file": "projects/vr-lib/src/lib/components/icon/icon-night.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
-            "projects/vr-lib/src/lib/components/no-data/no-data-day.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<VrKitNoDataComponent>",
-                    "file": "projects/vr-lib/src/lib/components/no-data/no-data-day.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "description": "",
-                    "kind": 183
-                }
-            ],
-            "projects/vr-lib/src/lib/components/no-data/no-data-night.stories.ts": [
-                {
-                    "name": "Story",
-                    "ctype": "miscellaneous",
-                    "subtype": "typealias",
-                    "rawtype": "StoryObj<VrKitNoDataComponent>",
-                    "file": "projects/vr-lib/src/lib/components/no-data/no-data-night.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -1080,7 +1102,17 @@
                 "status": "low"
             },
             {
-                "filePath": "projects/vr-lib/src/lib/components/page-header/page-header.stories.ts",
+                "filePath": "projects/vr-lib/src/lib/components/page-header/page-header-day.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/page-header/page-header-night.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
