@@ -52,5 +52,6 @@ export const Default: Story = {
     districts,
     currentDistrictIds: [1],
     userInfoModel: userInfo,
+    isThemeToggleActive: true,
   },
 };
