@@ -8,6 +8,12 @@
             </a>
         </ng-container>
     </nav>
+    @if (isThemeToggleActive) {
+    <mat-slide-toggle [checked]="isNightTheme()" (change)="toggleTheme()">
+        <span class="material-icons-outlined">{{ isNightTheme() ? 'dark_mode' : 'light_mode' }}</span>
+    </mat-slide-toggle>
+    }
+
     @if(districts.length) {
     <button class="menu__button" [matMenuTriggerFor]="districtMenu">
         <span class="material-icons-outlined">place</span>

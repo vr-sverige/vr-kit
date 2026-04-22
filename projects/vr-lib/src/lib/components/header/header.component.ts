@@ -1,6 +1,7 @@
 import {
   Component,
   EventEmitter,
+  inject,
   Input,
   Output,
 } from '@angular/core';
@@ -11,6 +12,8 @@ import { RouterLink } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { ThemeService, NIGHT_THEME } from '../../services/theme.service';
 
 export interface NavigationItem {
   route: string;
@@ -42,10 +45,19 @@ export interface UserInfoModel {
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
+    MatSlideToggleModule,
   ],
 })
 
 export class VrKitHeaderComponent {
+  private themeService = inject(ThemeService);
+
+  isNightTheme = () => this.themeService.currentTheme() === NIGHT_THEME;
+
+  toggleTheme() {
+    this.themeService.setTheme(this.isNightTheme());
+  }
+
   @Input()
   navigationItems = new Array<NavigationItem>();
 
@@ -60,6 +72,9 @@ export class VrKitHeaderComponent {
 
   @Input()
   isDistrictSelectorActive: boolean = true;
+
+  @Input()
+  isThemeToggleActive: boolean = false;
 
   @Output()
   onLogoClick = new EventEmitter<boolean>();

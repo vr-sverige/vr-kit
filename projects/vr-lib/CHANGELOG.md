@@ -1,5 +1,11 @@
 # Changelog
 
+## [0.0.63] - 2026-04-22
+### Added
+- Theme toggle in header (controlled via `isThemeToggleActive` input)
+- ThemeService with signal-based currentTheme exposed in public API
+- Dark mode support for header component
+
 ## [0.0.5] - 2025-09-26
 ### Added
 - Mat theming
