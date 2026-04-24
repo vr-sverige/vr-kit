@@ -1,5 +1,9 @@
 # Changelog
 
+## [0.0.64] - 2026-04-22
+### Added
+- Export fonts and icons assets through the library package
+
 ## [0.0.63] - 2026-04-22
 ### Added
 - Theme toggle in header (controlled via `isThemeToggleActive` input)

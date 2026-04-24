@@ -12,7 +12,6 @@ import { RouterLink } from '@angular/router';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { ThemeService, NIGHT_THEME } from '../../services/theme.service';
 
 export interface NavigationItem {
@@ -45,7 +44,6 @@ export interface UserInfoModel {
     MatIconModule,
     MatButtonModule,
     MatMenuModule,
-    MatSlideToggleModule,
   ],
 })
 
@@ -95,6 +93,15 @@ export class VrKitHeaderComponent {
 
   public userInfoOpened = false;
   public hamburgerOpened = false;
+  public mobileMenuOpen = false;
+
+  public toggleMobileMenu() {
+    this.mobileMenuOpen = !this.mobileMenuOpen;
+  }
+
+  public closeMobileMenu() {
+    this.mobileMenuOpen = false;
+  }
 
   public districtChanged(districts: any[]) {
     const ids = districts.map((district: any) => district.id);
