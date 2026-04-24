@@ -6,6 +6,10 @@ html {
    @include mat.all-component-themes(vr.$light-theme);
 }
 
+.theme-night {
+  @include mat.all-component-colors(vr.$dark-theme);
+}
+
 body {
   font-family: 'SuisseIntl' !important;
 }

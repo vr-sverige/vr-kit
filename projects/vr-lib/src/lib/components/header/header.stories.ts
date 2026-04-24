@@ -1,12 +1,13 @@
 import { Meta, StoryObj, moduleMetadata } from '@storybook/angular';
-import { VrKitHeaderComponent, UserInfoModel } from './header.component';
+import { RouterTestingModule } from '@angular/router/testing';
+import { VrKitHeaderComponent, UserInfoModel, NavigationItem } from './header.component';
 
 export default {
   title: 'Components/Header',
   component: VrKitHeaderComponent,
   decorators: [
     moduleMetadata({
-      imports: [],
+      imports: [RouterTestingModule],
     }),
   ],
   parameters: {
@@ -33,11 +34,14 @@ const userInfo: UserInfoModel = {
   logoutLabel: 'Logout',
 };
 
-const navigationItems = [
+const navigationItems: NavigationItem[] = [
   { route: '', name: 'Home', isActive: true },
   { route: '/about', name: 'About', isActive: false },
   { route: '/contact', name: 'Contact', isActive: false },
-  { route: '/help', name: 'Help', isActive: false }
+  { route: '/help', name: 'Help', isActive: false },
+  { route: '/settings', name: 'Settings', isActive: false },
+  { route: '/dashboard', name: 'Dashboard', isActive: false },
+  { route: '/reports', name: 'Reports', isActive: false },
 ];
 
 const districts = [

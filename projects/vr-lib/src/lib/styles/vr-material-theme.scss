@@ -146,3 +146,19 @@ $vr-theme: mat.define-theme(
     ),
   )
 );
+
+$dark-theme: mat.define-theme(
+  (
+    color: (
+      theme-type: dark,
+      primary: $_primary,
+    ),
+    typography: (
+      plain-family: 'SuisseIntl',
+      brand-family: 'SuisseIntl',
+    ),
+    density: (
+        scale: -2
+    ),
+  )
+);

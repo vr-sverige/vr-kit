@@ -1,66 +1,77 @@
 <header class="app-header">
     <img (click)="onLogoClick.emit(true)" src="/assets/icons/vr_logo.svg" />
-    <nav class="app-header__navigation">
-        <ng-container *ngFor="let item of navigationItems">
-            <a [routerLink]="item.route" class="app-header__link"
-                [ngClass]="{ 'app-header__link--current' : isCurrent(item.route) }">
-                {{ item.name }}
-            </a>
-        </ng-container>
-    </nav>
+
     @if (isThemeToggleActive) {
-    <mat-slide-toggle [checked]="isNightTheme()" (change)="toggleTheme()">
+    <button class="app-header__theme-toggle" (click)="toggleTheme()" aria-label="Toggle theme">
         <span class="material-icons-outlined">{{ isNightTheme() ? 'dark_mode' : 'light_mode' }}</span>
-    </mat-slide-toggle>
+    </button>
     }
 
-    @if(districts.length) {
-    <button class="menu__button" [matMenuTriggerFor]="districtMenu">
-        <span class="material-icons-outlined">place</span>
-        {{ getCurrentDistrictName() }}
-        <span class="material-icons-outlined chevron-icon" aria-hidden="true">keyboard_arrow_down</span>
+    <button class="app-header__hamburger" (click)="toggleMobileMenu()" aria-label="Toggle navigation menu">
+        <span class="material-icons-outlined">{{ mobileMenuOpen ? 'close' : 'menu' }}</span>
     </button>
-    <mat-menu #districtMenu="matMenu">
-        <dl class="menu__list">
-            @for (district of districts; track district) {
-            <li class="district-item">
-                <span class="material-icons-outlined"
-                    [ngClass]="{ 'active': currentDistrictIds.includes(district.id) }">check</span>
-                <button (click)="districtChanged([district])" class="district-change-button">
-                    {{ district.name }}
-                </button>
-            </li>
-            }
-        </dl>
-    </mat-menu>
 
-    }
-    @if (userInfoModel) {
-    <button class="menu__button" [matMenuTriggerFor]="menu">
-        <span class="material-icons-outlined">person</span>
-        {{ userInfoModel.name }}
-        <span class="material-icons-outlined chevron-icon" aria-hidden="true">keyboard_arrow_down</span>
-    </button>
-    <mat-menu #menu="matMenu">
-        <dl class="menu__list">
-            @if (userInfoModel.emailContent) {
-            <dt>{{ userInfoModel.emailLabel }}</dt>
-            <li>{{ userInfoModel.emailContent || '' }}</li>
+    <div class="app-header__content" [ngClass]="{ 'app-header__content--open': mobileMenuOpen }">
+        <nav class="app-header__navigation">
+            <ng-container *ngFor="let item of navigationItems">
+                <a [routerLink]="item.route" class="app-header__link"
+                    [ngClass]="{ 'app-header__link--current' : isCurrent(item.route) }"
+                    (click)="closeMobileMenu()">
+                    {{ item.name }}
+                </a>
+            </ng-container>
+        </nav>
+
+        <div class="app-header__actions">
+            @if(districts.length) {
+            <button class="menu__button" [matMenuTriggerFor]="districtMenu">
+                <span class="material-icons-outlined">place</span>
+                {{ getCurrentDistrictName() }}
+                <span class="material-icons-outlined chevron-icon" aria-hidden="true">keyboard_arrow_down</span>
+            </button>
+            <mat-menu #districtMenu="matMenu">
+                <dl class="menu__list">
+                    @for (district of districts; track district) {
+                    <li class="district-item">
+                        <span class="material-icons-outlined"
+                            [ngClass]="{ 'active': currentDistrictIds.includes(district.id) }">check</span>
+                        <button (click)="districtChanged([district])" class="district-change-button">
+                            {{ district.name }}
+                        </button>
+                    </li>
+                    }
+                </dl>
+            </mat-menu>
             }
-            @if (userInfoModel.phoneContent) {
-            <dt>{{ userInfoModel.phoneLabel }}</dt>
-            <li>{{ userInfoModel.phoneContent || '' }}</li>
+
+            @if (userInfoModel) {
+            <button class="menu__button" [matMenuTriggerFor]="menu">
+                <span class="material-icons-outlined">person</span>
+                {{ userInfoModel.name }}
+                <span class="material-icons-outlined chevron-icon" aria-hidden="true">keyboard_arrow_down</span>
+            </button>
+            <mat-menu #menu="matMenu">
+                <dl class="menu__list">
+                    @if (userInfoModel.emailContent) {
+                    <dt>{{ userInfoModel.emailLabel }}</dt>
+                    <li>{{ userInfoModel.emailContent || '' }}</li>
+                    }
+                    @if (userInfoModel.phoneContent) {
+                    <dt>{{ userInfoModel.phoneLabel }}</dt>
+                    <li>{{ userInfoModel.phoneContent || '' }}</li>
+                    }
+                    @if (userInfoModel.districtLabel) {
+                    <dt>{{ userInfoModel.districtLabel }}</dt>
+                    <li>{{ userInfoModel.districtContent || '' }}</li>
+                    }
+                    @if (userInfoModel.roleContent?.length) {
+                    <dt>{{ userInfoModel.roleLabel }}</dt>
+                    <li>{{ userInfoModel.roleContent ? userInfoModel.roleContent!.join(', ') : '' }}</li>
+                    }
+                    <button mat-flat-button (click)="onLogoutClick.emit(true)">Logout</button>
+                </dl>
+            </mat-menu>
             }
-            @if (userInfoModel.districtLabel) {
-            <dt>{{ userInfoModel.districtLabel }}</dt>
-            <li>{{ userInfoModel.districtContent || '' }}</li>
-            }
-            @if (userInfoModel.roleContent?.length) {
-            <dt>{{ userInfoModel.roleLabel }}</dt>
-            <li>{{ userInfoModel.roleContent ? userInfoModel.roleContent!.join(', ') : '' }}</li>
-            }
-            <button mat-flat-button (click)="onLogoutClick.emit(true)">Logout</button>
-        </dl>
-    </mat-menu>
-    }
+        </div>
+    </div>
 </header>

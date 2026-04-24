@@ -1,3 +1,5 @@
+$mobile-breakpoint: 768px;
+
 .app-header {
 	box-sizing: border-box;
 	display: flex;
@@ -12,18 +14,80 @@
 	z-index: 10;
 	width: 100%;
 	color: var(--black-white);
+	flex-wrap: nowrap;
+
+	@media (max-width: $mobile-breakpoint) {
+		flex-wrap: wrap;
+		gap: 0;
+		height: auto;
+		min-height: 60px;
+		padding: 0 16px;
+	}
+
+	&__hamburger {
+		all: unset;
+		cursor: pointer;
+		display: none;
+		align-items: center;
+		justify-content: center;
+		color: var(--black-white);
+		padding: 8px;
+
+		.material-icons-outlined {
+			font-size: 28px;
+		}
+
+		@media (max-width: $mobile-breakpoint) {
+			display: flex;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex: 1;
+		align-items: center;
+		gap: 28px;
+
+		@media (max-width: $mobile-breakpoint) {
+			display: none;
+			flex: none;
+			width: 100%;
+			gap: 0;
+			padding-bottom: 16px;
+
+			&--open {
+				display: flex;
+				flex-direction: column;
+				align-items: stretch;
+			}
+		}
+	}
 
 	&__navigation {
 		display: flex;
 		flex: 1;
-		gap: 13px;
-		overflow: none;
-		width: 100%;
-		display: flex;
-		flex-grow: 2;
 		gap: 20px;
 		align-self: stretch;
 
+		@media (max-width: $mobile-breakpoint) {
+			flex-direction: column;
+			gap: 0;
+			align-self: auto;
+		}
+	}
+
+	&__actions {
+		display: flex;
+		align-items: center;
+		gap: 28px;
+
+		@media (max-width: $mobile-breakpoint) {
+			flex-direction: column;
+			align-items: stretch;
+			gap: 12px;
+			padding-top: 12px;
+			border-top: 1px solid var(--grey50-grey60);
+		}
 	}
 
 	&__link {
@@ -38,6 +102,36 @@
 		&--current {
 			font-weight: bold;
 			border-bottom: 2px solid var(--black-white);
+		}
+
+		@media (max-width: $mobile-breakpoint) {
+			padding: 12px 0;
+			border-bottom: 1px solid transparent;
+
+			&--current {
+				border-bottom: none;
+				font-weight: bold;
+			}
+		}
+	}
+
+	&__theme-toggle {
+		all: unset;
+		cursor: pointer;
+		display: flex;
+		align-items: center;
+		color: var(--black-white);
+
+		.material-icons-outlined {
+			font-size: 24px;
+		}
+
+		&:hover {
+			opacity: 0.7;
+		}
+
+		@media (max-width: $mobile-breakpoint) {
+			margin-left: auto;
 		}
 	}
 }
@@ -54,9 +148,14 @@
 		display: flex;
 		align-items: center;
 		gap: 8px;
+		white-space: nowrap;
 
 		&[aria-expanded="true"] .chevron-icon {
 			transform: rotate(180deg);
+		}
+
+		@media (max-width: $mobile-breakpoint) {
+			padding: 8px 0;
 		}
 	}
 
@@ -76,6 +175,7 @@
 			display: flex;
 			align-items: center;
 			gap: 8px;
+      color: var(--black-white);
 
 			.material-icons-outlined {
 				color: transparent;
@@ -96,14 +196,5 @@
 
 	&:hover {
 		text-decoration: underline;
-	}
-}
-
-mat-slide-toggle {
-	display: flex;
-	align-items: center;
-
-	.material-icons-outlined {
-		font-size: 20px;
 	}
 }
