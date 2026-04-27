@@ -8,13 +8,18 @@ $mobile-breakpoint: 768px;
 	padding: 0 24px;
 	gap: 28px;
 	height: 60px;
-	align-items: center;
+	align-items: stretch;
 	position: sticky;
 	top: 0;
 	z-index: 10;
 	width: 100%;
 	color: var(--black-white);
 	flex-wrap: nowrap;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+  }
 
 	@media (max-width: $mobile-breakpoint) {
 		flex-wrap: wrap;
