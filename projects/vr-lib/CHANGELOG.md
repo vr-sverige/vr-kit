@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.0.67] - 2026-04-28
+### Added
+- New document icons (document_chain, document_check, document_clip, document_up_down)
+- White icon color for night theme story
+
+### Fixed
+- Mobile hamburger menu now stacks navigation items vertically
+- RouterTestingModule added to header story for routerLink rendering
+
+## [0.0.66] - 2026-04-27
+### Added
+- Compiled styles.css included in published package
+
 ## [0.0.64] - 2026-04-22
 ### Added
 - Export fonts and icons assets through the library package

@@ -30,6 +30,9 @@ const template = iconPaths
 	.join(' ');
 
 export const IconList: Story = {
+	args: {
+		color: '#ffffff',
+	},
 	render: (args) => ({
 		props: args,
 		template: `<div style="display:flex; flex-wrap: wrap; gap: 20px;">${template}</div>`,
