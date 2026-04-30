@@ -10,4 +10,5 @@ export { VrKitArticleComponent } from './lib/components/article/article.componen
 export { VrKitStepperComponent } from './lib/components/stepper/stepper.component';
 export { VrKitIconComponent } from './lib/components/icon/icon.component';
 export { VrKitNoDataComponent } from './lib/components/no-data/no-data.component';
+export { VrKitLoadscreenComponent } from './lib/components/loadscreen/loadscreen.component';
 export { ThemeService, DAY_THEME, NIGHT_THEME, VR_THEME, THEME_KEY } from './lib/services/theme.service';

@@ -54,6 +54,16 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "StoryObj<VrKitBreadcrumbComponent>",
+                "defaultValue": "{\r\n  args: {\r\n    list: exampleList,\r\n  },\r\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/vr-lib/src/lib/components/header/header.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -64,11 +74,21 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
-                "file": "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts",
+                "file": "projects/vr-lib/src/lib/components/loadscreen/loadscreen-day.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
-                "type": "StoryObj<VrKitBreadcrumbComponent>",
-                "defaultValue": "{\r\n  args: {\r\n    list: exampleList,\r\n  },\r\n}"
+                "type": "Story",
+                "defaultValue": "{}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/loadscreen/loadscreen-night.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{}"
             },
             {
                 "name": "Default",
@@ -138,7 +158,17 @@
                 "deprecated": false,
                 "deprecationMessage": "",
                 "type": "Story",
-                "defaultValue": "{\r\n\trender: (args) => ({\r\n\t\tprops: args,\r\n\t\ttemplate: `<div style=\"display:flex; flex-wrap: wrap; gap: 20px;\">${template}</div>`,\r\n\t}),\r\n}"
+                "defaultValue": "{\r\n\targs: {\r\n\t\tcolor: '#ffffff',\r\n\t},\r\n\trender: (args) => ({\r\n\t\tprops: args,\r\n\t\ttemplate: `<div style=\"display:flex; flex-wrap: wrap; gap: 20px;\">${template}</div>`,\r\n\t}),\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/icon/icon-colorkey.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<VrKitIconComponent>",
+                "defaultValue": "{\r\n\ttitle: 'Components/Icon/ColorKey',\r\n\tcomponent: VrKitIconComponent,\r\n\targTypes: {\r\n\t\tcolorKey: {\r\n\t\t\tcontrol: {\r\n\t\t\t\ttype: 'text',\r\n\t\t\t},\r\n\t\t},\r\n\t},\r\n\tdecorators: [\r\n\t\tmoduleMetadata({\r\n\t\t\timports: [MatTooltipModule],\r\n\t\t}),\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t(story) =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-day\" style=\"padding: 30px; background-color: #f5f5f5;\">${story}</div>`\r\n\t\t),\r\n\t],\r\n}"
             },
             {
                 "name": "meta",
@@ -159,6 +189,26 @@
                 "deprecationMessage": "",
                 "type": "Meta<VrKitIconComponent>",
                 "defaultValue": "{\r\n\ttitle: 'Components/Icon/Night Theme',\r\n\tcomponent: VrKitIconComponent,\r\n\tdecorators: [\r\n\t\tmoduleMetadata({\r\n\t\t\timports: [MatTooltipModule],\r\n\t\t}),\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t(story) =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-night\" style=\"padding: 30px; background-color: #404040;\">${story}</div>`\r\n\t\t),\r\n\t],\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/loadscreen/loadscreen-day.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<VrKitLoadscreenComponent>",
+                "defaultValue": "{\r\n  title: 'Components/Loadscreen/Day Theme',\r\n  component: VrKitLoadscreenComponent,\r\n  decorators: [\r\n    applicationConfig({\r\n      providers: [\r\n        {\r\n          provide: ThemeService,\r\n          useFactory: () => {\r\n            localStorage.setItem(THEME_KEY, DAY_THEME);\r\n            return new ThemeService();\r\n          },\r\n        },\r\n      ],\r\n    }),\r\n    componentWrapperDecorator(\r\n      (story) =>\r\n        `<div id=\"storywrapper\" class=\"vr-theme theme-day\" style=\"background-color: #ffffff; height: 100vh;\">${story}</div>`\r\n    ),\r\n  ],\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/loadscreen/loadscreen-night.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<VrKitLoadscreenComponent>",
+                "defaultValue": "{\r\n  title: 'Components/Loadscreen/Night Theme',\r\n  component: VrKitLoadscreenComponent,\r\n  decorators: [\r\n    applicationConfig({\r\n      providers: [\r\n        {\r\n          provide: ThemeService,\r\n          useFactory: () => {\r\n            localStorage.setItem(THEME_KEY, NIGHT_THEME);\r\n            return new ThemeService();\r\n          },\r\n        },\r\n      ],\r\n    }),\r\n    componentWrapperDecorator(\r\n      (story) =>\r\n        `<div id=\"storywrapper\" class=\"vr-theme theme-night\" style=\"background-color: #404040; height: 100vh;\">${story}</div>`\r\n    ),\r\n  ],\r\n}"
             },
             {
                 "name": "meta",
@@ -219,6 +269,16 @@
                 "deprecationMessage": "",
                 "type": "Step[]",
                 "defaultValue": "[\r\n    { displayName: 'Mora C', active: true },\r\n    { displayName: 'Rattvik', active: true },\r\n    { displayName: 'Leksand', active: false },\r\n    { displayName: 'Djuras', active: false },\r\n]"
+            },
+            {
+                "name": "template",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/icon/icon-colorkey.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "iconPaths\r\n\t.map(\r\n\t\t(path) =>\r\n\t\t\t`<vr-kit-icon [path]=\"'${path}'\" [colorKey]=\"colorKey\" [size]=\"'36px'\" [tooltipText]=\"'${path}'\"></vr-kit-icon>`\r\n\t)\r\n\t.join(' ')"
             },
             {
                 "name": "template",
@@ -291,6 +351,16 @@
                 "defaultValue": "{\r\n  args: {\r\n    display: 'white',\r\n    title: 'White Article',\r\n  },\r\n}"
             },
             {
+                "name": "WithColorKey",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/icon/icon-colorkey.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n\targs: {\r\n\t\tcolorKey: '--black-white',\r\n\t},\r\n\trender: (args) => ({\r\n\t\tprops: args,\r\n\t\ttemplate: `<div style=\"display:flex; flex-wrap: wrap; gap: 20px;\">${template}</div>`,\r\n\t}),\r\n}"
+            },
+            {
                 "name": "WithSubText",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -340,6 +410,17 @@
                 "ctype": "miscellaneous",
                 "subtype": "typealias",
                 "rawtype": "StoryObj<VrKitIconComponent>",
+                "file": "projects/vr-lib/src/lib/components/icon/icon-colorkey.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<VrKitIconComponent>",
                 "file": "projects/vr-lib/src/lib/components/icon/icon-day.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -352,6 +433,28 @@
                 "subtype": "typealias",
                 "rawtype": "StoryObj<VrKitIconComponent>",
                 "file": "projects/vr-lib/src/lib/components/icon/icon-night.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<VrKitLoadscreenComponent>",
+                "file": "projects/vr-lib/src/lib/components/loadscreen/loadscreen-day.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<VrKitLoadscreenComponent>",
+                "file": "projects/vr-lib/src/lib/components/loadscreen/loadscreen-night.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
                 "description": "",
@@ -510,6 +613,28 @@
                     "defaultValue": "{\r\n  args: {\r\n    display: 'white',\r\n    title: 'White Article',\r\n  },\r\n}"
                 }
             ],
+            "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "StoryObj<VrKitBreadcrumbComponent>",
+                    "defaultValue": "{\r\n  args: {\r\n    list: exampleList,\r\n  },\r\n}"
+                },
+                {
+                    "name": "exampleList",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "IBreadcrumb[]",
+                    "defaultValue": "[\r\n  { label: 'Home', url: '/' },\r\n  { label: 'Section', url: '/section' },\r\n  { label: 'Page', url: '/section/page' },\r\n]"
+                }
+            ],
             "projects/vr-lib/src/lib/components/header/header.stories.ts": [
                 {
                     "name": "Default",
@@ -552,26 +677,48 @@
                     "defaultValue": "{\r\n  name: 'John Doe',\r\n  emailLabel: 'Email',\r\n  emailContent: 'john.doe@example.com',\r\n  phoneLabel: 'Phone',\r\n  phoneContent: '+123456789',\r\n  districtLabel: 'District',\r\n  districtContent: 'Central',\r\n  roleLabel: 'Role',\r\n  roleContent: ['Admin'],\r\n  logoutLabel: 'Logout',\r\n}"
                 }
             ],
-            "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts": [
+            "projects/vr-lib/src/lib/components/loadscreen/loadscreen-day.stories.ts": [
                 {
                     "name": "Default",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts",
+                    "file": "projects/vr-lib/src/lib/components/loadscreen/loadscreen-day.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "StoryObj<VrKitBreadcrumbComponent>",
-                    "defaultValue": "{\r\n  args: {\r\n    list: exampleList,\r\n  },\r\n}"
+                    "type": "Story",
+                    "defaultValue": "{}"
                 },
                 {
-                    "name": "exampleList",
+                    "name": "meta",
                     "ctype": "miscellaneous",
                     "subtype": "variable",
-                    "file": "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts",
+                    "file": "projects/vr-lib/src/lib/components/loadscreen/loadscreen-day.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
-                    "type": "IBreadcrumb[]",
-                    "defaultValue": "[\r\n  { label: 'Home', url: '/' },\r\n  { label: 'Section', url: '/section' },\r\n  { label: 'Page', url: '/section/page' },\r\n]"
+                    "type": "Meta<VrKitLoadscreenComponent>",
+                    "defaultValue": "{\r\n  title: 'Components/Loadscreen/Day Theme',\r\n  component: VrKitLoadscreenComponent,\r\n  decorators: [\r\n    applicationConfig({\r\n      providers: [\r\n        {\r\n          provide: ThemeService,\r\n          useFactory: () => {\r\n            localStorage.setItem(THEME_KEY, DAY_THEME);\r\n            return new ThemeService();\r\n          },\r\n        },\r\n      ],\r\n    }),\r\n    componentWrapperDecorator(\r\n      (story) =>\r\n        `<div id=\"storywrapper\" class=\"vr-theme theme-day\" style=\"background-color: #ffffff; height: 100vh;\">${story}</div>`\r\n    ),\r\n  ],\r\n}"
+                }
+            ],
+            "projects/vr-lib/src/lib/components/loadscreen/loadscreen-night.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/loadscreen/loadscreen-night.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/loadscreen/loadscreen-night.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<VrKitLoadscreenComponent>",
+                    "defaultValue": "{\r\n  title: 'Components/Loadscreen/Night Theme',\r\n  component: VrKitLoadscreenComponent,\r\n  decorators: [\r\n    applicationConfig({\r\n      providers: [\r\n        {\r\n          provide: ThemeService,\r\n          useFactory: () => {\r\n            localStorage.setItem(THEME_KEY, NIGHT_THEME);\r\n            return new ThemeService();\r\n          },\r\n        },\r\n      ],\r\n    }),\r\n    componentWrapperDecorator(\r\n      (story) =>\r\n        `<div id=\"storywrapper\" class=\"vr-theme theme-night\" style=\"background-color: #404040; height: 100vh;\">${story}</div>`\r\n    ),\r\n  ],\r\n}"
                 }
             ],
             "projects/vr-lib/src/lib/components/stepper/stepper.stories.ts": [
@@ -661,7 +808,7 @@
                     "deprecated": false,
                     "deprecationMessage": "",
                     "type": "Story",
-                    "defaultValue": "{\r\n\trender: (args) => ({\r\n\t\tprops: args,\r\n\t\ttemplate: `<div style=\"display:flex; flex-wrap: wrap; gap: 20px;\">${template}</div>`,\r\n\t}),\r\n}"
+                    "defaultValue": "{\r\n\targs: {\r\n\t\tcolor: '#ffffff',\r\n\t},\r\n\trender: (args) => ({\r\n\t\tprops: args,\r\n\t\ttemplate: `<div style=\"display:flex; flex-wrap: wrap; gap: 20px;\">${template}</div>`,\r\n\t}),\r\n}"
                 },
                 {
                     "name": "meta",
@@ -682,6 +829,38 @@
                     "deprecationMessage": "",
                     "type": "",
                     "defaultValue": "iconPaths\r\n\t.map(\r\n\t\t(path) =>\r\n\t\t\t`<vr-kit-icon [path]=\"'${path}'\" [color]=\"color\" [size]=\"'36px'\" [tooltipText]=\"'${path}'\"></vr-kit-icon>`\r\n\t)\r\n\t.join(' ')"
+                }
+            ],
+            "projects/vr-lib/src/lib/components/icon/icon-colorkey.stories.ts": [
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/icon/icon-colorkey.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<VrKitIconComponent>",
+                    "defaultValue": "{\r\n\ttitle: 'Components/Icon/ColorKey',\r\n\tcomponent: VrKitIconComponent,\r\n\targTypes: {\r\n\t\tcolorKey: {\r\n\t\t\tcontrol: {\r\n\t\t\t\ttype: 'text',\r\n\t\t\t},\r\n\t\t},\r\n\t},\r\n\tdecorators: [\r\n\t\tmoduleMetadata({\r\n\t\t\timports: [MatTooltipModule],\r\n\t\t}),\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t(story) =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-day\" style=\"padding: 30px; background-color: #f5f5f5;\">${story}</div>`\r\n\t\t),\r\n\t],\r\n}"
+                },
+                {
+                    "name": "template",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/icon/icon-colorkey.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "iconPaths\r\n\t.map(\r\n\t\t(path) =>\r\n\t\t\t`<vr-kit-icon [path]=\"'${path}'\" [colorKey]=\"colorKey\" [size]=\"'36px'\" [tooltipText]=\"'${path}'\"></vr-kit-icon>`\r\n\t)\r\n\t.join(' ')"
+                },
+                {
+                    "name": "WithColorKey",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/icon/icon-colorkey.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n\targs: {\r\n\t\tcolorKey: '--black-white',\r\n\t},\r\n\trender: (args) => ({\r\n\t\tprops: args,\r\n\t\ttemplate: `<div style=\"display:flex; flex-wrap: wrap; gap: 20px;\">${template}</div>`,\r\n\t}),\r\n}"
                 }
             ],
             "projects/vr-lib/src/lib/material-overview/material-overview.stories.ts": [
@@ -738,6 +917,19 @@
                     "kind": 183
                 }
             ],
+            "projects/vr-lib/src/lib/components/icon/icon-colorkey.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<VrKitIconComponent>",
+                    "file": "projects/vr-lib/src/lib/components/icon/icon-colorkey.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
             "projects/vr-lib/src/lib/components/icon/icon-day.stories.ts": [
                 {
                     "name": "Story",
@@ -758,6 +950,32 @@
                     "subtype": "typealias",
                     "rawtype": "StoryObj<VrKitIconComponent>",
                     "file": "projects/vr-lib/src/lib/components/icon/icon-night.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/vr-lib/src/lib/components/loadscreen/loadscreen-day.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<VrKitLoadscreenComponent>",
+                    "file": "projects/vr-lib/src/lib/components/loadscreen/loadscreen-day.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
+            "projects/vr-lib/src/lib/components/loadscreen/loadscreen-night.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<VrKitLoadscreenComponent>",
+                    "file": "projects/vr-lib/src/lib/components/loadscreen/loadscreen-night.stories.ts",
                     "deprecated": false,
                     "deprecationMessage": "",
                     "description": "",
@@ -942,6 +1160,46 @@
                 "status": "low"
             },
             {
+                "filePath": "projects/vr-lib/src/lib/components/icon/icon-colorkey.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/icon/icon-colorkey.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "template",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/icon/icon-colorkey.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "WithColorKey",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/icon/icon-colorkey.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
                 "filePath": "projects/vr-lib/src/lib/components/icon/icon-day.stories.ts",
                 "type": "variable",
                 "linktype": "miscellaneous",
@@ -1013,6 +1271,66 @@
             },
             {
                 "filePath": "projects/vr-lib/src/lib/components/icon/icon-night.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/loadscreen/loadscreen-day.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/loadscreen/loadscreen-day.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/loadscreen/loadscreen-day.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/loadscreen/loadscreen-night.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "Default",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/loadscreen/loadscreen-night.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/loadscreen/loadscreen-night.stories.ts",
                 "type": "type alias",
                 "linktype": "miscellaneous",
                 "linksubtype": "typealias",

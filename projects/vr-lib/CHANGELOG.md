@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.70] - 2026-04-30
+### Added
+- Loadscreen component with day/night theme support
+- Animated train GIF assets (moving_train_day, moving_train_night)
+- Icon colorKey story for testing custom color variables
+- Loadscreen exported in public API
+
 ## [0.0.67] - 2026-04-28
 ### Added
 - New document icons (document_chain, document_check, document_clip, document_up_down)
