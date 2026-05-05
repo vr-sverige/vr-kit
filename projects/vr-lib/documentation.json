@@ -6,10 +6,76 @@
     "interceptors": [],
     "classes": [],
     "directives": [],
-    "components": [],
+    "components": [
+        {
+            "name": "ColorSwatchComponent",
+            "id": "component-ColorSwatchComponent-7dceffc4911cde09f427c9643cb3063e25e63dc55230052bf381d35596df8883cf8c4adfed97a945ffeb6fb567b936659952b2b4724def0f70cbc54c5a3f0b7f",
+            "file": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "color-swatch",
+            "styleUrls": [],
+            "styles": [],
+            "template": "",
+            "templateUrl": [],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component } from '@angular/core';\r\nimport { componentWrapperDecorator } from '@storybook/angular';\r\nimport type { Meta, StoryObj } from '@storybook/angular';\r\n\r\nconst baseColors = [\r\n\t'--awesome-loader-day',\r\n\t'--background',\r\n\t'--error',\r\n\t'--icon',\r\n\t'--info',\r\n\t'--marketingblue',\r\n\t'--marketingpink',\r\n\t'--marketingviolet',\r\n\t'--marketingyellow',\r\n\t'--primary-light',\r\n\t'--primary-dark',\r\n\t'--warning',\r\n\t'--transparent',\r\n\t'--black',\r\n\t'--blue10',\r\n\t'--blue20',\r\n\t'--blue30',\r\n\t'--blue40',\r\n\t'--green00',\r\n\t'--green05',\r\n\t'--green10',\r\n\t'--green20',\r\n\t'--green30',\r\n\t'--green40',\r\n\t'--green45',\r\n\t'--green50',\r\n\t'--green60',\r\n\t'--grey20',\r\n\t'--grey30',\r\n\t'--grey35',\r\n\t'--grey40',\r\n\t'--grey50',\r\n\t'--grey60',\r\n\t'--grey70',\r\n\t'--grey80',\r\n\t'--orange10',\r\n\t'--orange20',\r\n\t'--orange30',\r\n\t'--orange40',\r\n\t'--orange50',\r\n\t'--pink10',\r\n\t'--pink20',\r\n\t'--pink30',\r\n\t'--pink40',\r\n\t'--pink60',\r\n\t'--red10',\r\n\t'--red20',\r\n\t'--red30',\r\n\t'--red40',\r\n\t'--violet00',\r\n\t'--violet10',\r\n\t'--violet20',\r\n\t'--violet30',\r\n\t'--violet40',\r\n\t'--violet70',\r\n\t'--violet80',\r\n\t'--white',\r\n];\r\n\r\nconst themeVariables = [\r\n\t'--awesomeloaderday-white',\r\n\t'--background-grey20',\r\n\t'--background-grey30',\r\n\t'--info-info',\r\n\t'--primary-green60',\r\n\t'--primarydark-green40',\r\n\t'--primarylight-grey30',\r\n\t'--primarylight-green30',\r\n\t'--primarylight-green45',\r\n\t'--primarylight-green50',\r\n\t'--primarylight-primarydark',\r\n\t'--primarylight-white',\r\n\t'--marketingyellow-orange40',\r\n\t'--marketingyellow-grey20',\r\n\t'--black-black',\r\n\t'--black-white',\r\n\t'--black-marketingyellow',\r\n\t'--blue10-orange20',\r\n\t'--blue30-blue30',\r\n\t'--blue40-blue10',\r\n\t'--green05-primarydark',\r\n\t'--green05-green05',\r\n\t'--green10-green20',\r\n\t'--green10-green30',\r\n\t'--green40-green05',\r\n\t'--green40-green20',\r\n\t'--green40-green45',\r\n\t'--green50-transparent',\r\n\t'--green50-green00',\r\n\t'--green50-green05',\r\n\t'--green50-green20',\r\n\t'--green60-primarylight',\r\n\t'--green60-transparent',\r\n\t'--green60-green00',\r\n\t'--green60-green05',\r\n\t'--green60-green40',\r\n\t'--green60-green60',\r\n\t'--grey20-white',\r\n\t'--grey20-green20',\r\n\t'--grey20-green45',\r\n\t'--grey20-grey20',\r\n\t'--grey20-grey80',\r\n\t'--grey20-green60',\r\n\t'--grey20-primarydark',\r\n\t'--grey20-orange20',\r\n\t'--grey30-white',\r\n\t'--grey30-grey60',\r\n\t'--grey35-grey20',\r\n\t'--grey35-grey50',\r\n\t'--grey35-grey60',\r\n\t'--grey35-grey80',\r\n\t'--grey35-green40',\r\n\t'--grey35-green45',\r\n\t'--grey35-green50',\r\n\t'--grey35-green60',\r\n\t'--grey35-violet80',\r\n\t'--grey35-white',\r\n\t'--grey40-green10',\r\n\t'--grey40-green30',\r\n\t'--grey40-green40',\r\n\t'--grey40-green45',\r\n\t'--grey40-green50',\r\n\t'--grey40-grey40',\r\n\t'--grey40-grey50',\r\n\t'--grey40-grey60',\r\n\t'--grey40-grey70',\r\n\t'--grey40-violet70',\r\n\t'--grey40-violet80',\r\n\t'--grey50-primarydark',\r\n\t'--grey50-white',\r\n\t'--grey50-grey20',\r\n\t'--grey50-grey30',\r\n\t'--grey50-grey40',\r\n\t'--grey50-grey50',\r\n\t'--grey50-grey60',\r\n\t'--grey60-green40',\r\n\t'--grey60-green45',\r\n\t'--grey60-grey40',\r\n\t'--grey60-grey50',\r\n\t'--grey60-grey60',\r\n\t'--grey60-violet40',\r\n\t'--grey60-white',\r\n\t'--grey70-grey30',\r\n\t'--grey70-grey35',\r\n\t'--grey70-grey40',\r\n\t'--grey70-grey70',\r\n\t'--grey80-grey20',\r\n\t'--grey80-grey30',\r\n\t'--grey80-grey35',\r\n\t'--grey80-grey40',\r\n\t'--grey80-grey50',\r\n\t'--grey80-white',\r\n\t'--orange10-orange30',\r\n\t'--orange10-orange20',\r\n\t'--orange10-grey20',\r\n\t'--orange20-blue10',\r\n\t'--pink10-pink10',\r\n\t'--pink20-violet40',\r\n\t'--pink30-violet20',\r\n\t'--pink30-violet30',\r\n\t'--pink40-violet00',\r\n\t'--pink40-violet10',\r\n\t'--pink60-violet10',\r\n\t'--pink60-violet20',\r\n\t'--red10-red20',\r\n\t'--red10-red30',\r\n\t'--red10-red40',\r\n\t'--red20-red30',\r\n\t'--violet20-violet40',\r\n\t'--violet30-violet20',\r\n\t'--violet70-violet00',\r\n\t'--violet70-violet10',\r\n\t'--violet80-violet00',\r\n\t'--violet80-violet10',\r\n\t'--white-black',\r\n\t'--white-primarylight',\r\n\t'--white-white',\r\n\t'--white-grey20',\r\n\t'--white-grey30',\r\n\t'--white-grey40',\r\n\t'--white-grey60',\r\n\t'--white-green10',\r\n\t'--white-green20',\r\n];\r\n\r\n@Component({\r\n\tselector: 'color-swatch',\r\n\tstandalone: true,\r\n\ttemplate: ``,\r\n})\r\nclass ColorSwatchComponent {}\r\n\r\nconst swatchStyle = `\r\n\t.color-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; padding: 20px; }\r\n\t.color-swatch { border-radius: 8px; overflow: hidden; border: 1px solid #ddd; }\r\n\t.color-swatch__preview { height: 48px; }\r\n\t.color-swatch__info { padding: 8px; font-family: monospace; font-size: 11px; background: #fff; }\r\n\t.theme-night .color-swatch__info { background: #333; color: #fff; }\r\n\t.color-swatch__name { font-weight: bold; margin-bottom: 4px; word-break: break-all; }\r\n\t.color-swatch__value { color: #666; }\r\n\t.theme-night .color-swatch__value { color: #aaa; }\r\n\th2 { padding: 20px 20px 0; font-family: sans-serif; }\r\n`;\r\n\r\nfunction buildSwatches(vars: string[]): string {\r\n\treturn vars\r\n\t\t.map(\r\n\t\t\t(v) => `\r\n\t\t<div class=\"color-swatch\">\r\n\t\t\t<div class=\"color-swatch__preview\" style=\"background-color: var(${v});\"></div>\r\n\t\t\t<div class=\"color-swatch__info\">\r\n\t\t\t\t<div class=\"color-swatch__name\">${v}</div>\r\n\t\t\t</div>\r\n\t\t</div>`\r\n\t\t)\r\n\t\t.join('');\r\n}\r\n\r\nconst meta: Meta<ColorSwatchComponent> = {\r\n\ttitle: 'Design Tokens/Color Variables',\r\n\tcomponent: ColorSwatchComponent,\r\n};\r\n\r\nexport default meta;\r\ntype Story = StoryObj<ColorSwatchComponent>;\r\n\r\nexport const BaseColors_Day: Story = {\r\n\tdecorators: [\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t() =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-day\">\r\n\t\t\t\t\t<style>${swatchStyle}</style>\r\n\t\t\t\t\t<h2>Base Colors (Day)</h2>\r\n\t\t\t\t\t<div class=\"color-grid\">${buildSwatches(baseColors)}</div>\r\n\t\t\t\t</div>`\r\n\t\t),\r\n\t],\r\n};\r\n\r\nexport const BaseColors_Night: Story = {\r\n\tdecorators: [\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t() =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-night\" style=\"background-color: #404040;\">\r\n\t\t\t\t\t<style>${swatchStyle}</style>\r\n\t\t\t\t\t<h2>Base Colors (Night)</h2>\r\n\t\t\t\t\t<div class=\"color-grid\">${buildSwatches(baseColors)}</div>\r\n\t\t\t\t</div>`\r\n\t\t),\r\n\t],\r\n};\r\n\r\nexport const ThemeVariables_Day: Story = {\r\n\tdecorators: [\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t() =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-day\">\r\n\t\t\t\t\t<style>${swatchStyle}</style>\r\n\t\t\t\t\t<h2>Theme Variables (Day)</h2>\r\n\t\t\t\t\t<div class=\"color-grid\">${buildSwatches(themeVariables)}</div>\r\n\t\t\t\t</div>`\r\n\t\t),\r\n\t],\r\n};\r\n\r\nexport const ThemeVariables_Night: Story = {\r\n\tdecorators: [\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t() =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-night\" style=\"background-color: #404040;\">\r\n\t\t\t\t\t<style>${swatchStyle}</style>\r\n\t\t\t\t\t<h2>Theme Variables (Night)</h2>\r\n\t\t\t\t\t<div class=\"color-grid\">${buildSwatches(themeVariables)}</div>\r\n\t\t\t\t</div>`\r\n\t\t),\r\n\t],\r\n};\r\n\r\nexport const SideBySide: Story = {\r\n\tdecorators: [\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t() =>\r\n\t\t\t\t`<div style=\"display: grid; grid-template-columns: 1fr 1fr; gap: 0;\">\r\n\t\t\t\t\t<div id=\"storywrapper\" class=\"vr-theme theme-day\" style=\"padding: 10px;\">\r\n\t\t\t\t\t\t<style>${swatchStyle}</style>\r\n\t\t\t\t\t\t<h2>Day Theme</h2>\r\n\t\t\t\t\t\t<div class=\"color-grid\">${buildSwatches(themeVariables)}</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"vr-theme theme-night\" style=\"background-color: #404040; padding: 10px;\">\r\n\t\t\t\t\t\t<h2>Night Theme</h2>\r\n\t\t\t\t\t\t<div class=\"color-grid\">${buildSwatches(themeVariables)}</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>`\r\n\t\t),\r\n\t],\r\n};\r\n",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": []
+        }
+    ],
     "modules": [],
     "miscellaneous": {
         "variables": [
+            {
+                "name": "baseColors",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[\r\n\t'--awesome-loader-day',\r\n\t'--background',\r\n\t'--error',\r\n\t'--icon',\r\n\t'--info',\r\n\t'--marketingblue',\r\n\t'--marketingpink',\r\n\t'--marketingviolet',\r\n\t'--marketingyellow',\r\n\t'--primary-light',\r\n\t'--primary-dark',\r\n\t'--warning',\r\n\t'--transparent',\r\n\t'--black',\r\n\t'--blue10',\r\n\t'--blue20',\r\n\t'--blue30',\r\n\t'--blue40',\r\n\t'--green00',\r\n\t'--green05',\r\n\t'--green10',\r\n\t'--green20',\r\n\t'--green30',\r\n\t'--green40',\r\n\t'--green45',\r\n\t'--green50',\r\n\t'--green60',\r\n\t'--grey20',\r\n\t'--grey30',\r\n\t'--grey35',\r\n\t'--grey40',\r\n\t'--grey50',\r\n\t'--grey60',\r\n\t'--grey70',\r\n\t'--grey80',\r\n\t'--orange10',\r\n\t'--orange20',\r\n\t'--orange30',\r\n\t'--orange40',\r\n\t'--orange50',\r\n\t'--pink10',\r\n\t'--pink20',\r\n\t'--pink30',\r\n\t'--pink40',\r\n\t'--pink60',\r\n\t'--red10',\r\n\t'--red20',\r\n\t'--red30',\r\n\t'--red40',\r\n\t'--violet00',\r\n\t'--violet10',\r\n\t'--violet20',\r\n\t'--violet30',\r\n\t'--violet40',\r\n\t'--violet70',\r\n\t'--violet80',\r\n\t'--white',\r\n]"
+            },
+            {
+                "name": "BaseColors_Day",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n\tdecorators: [\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t() =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-day\">\r\n\t\t\t\t\t<style>${swatchStyle}</style>\r\n\t\t\t\t\t<h2>Base Colors (Day)</h2>\r\n\t\t\t\t\t<div class=\"color-grid\">${buildSwatches(baseColors)}</div>\r\n\t\t\t\t</div>`\r\n\t\t),\r\n\t],\r\n}"
+            },
+            {
+                "name": "BaseColors_Night",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n\tdecorators: [\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t() =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-night\" style=\"background-color: #404040;\">\r\n\t\t\t\t\t<style>${swatchStyle}</style>\r\n\t\t\t\t\t<h2>Base Colors (Night)</h2>\r\n\t\t\t\t\t<div class=\"color-grid\">${buildSwatches(baseColors)}</div>\r\n\t\t\t\t</div>`\r\n\t\t),\r\n\t],\r\n}"
+            },
             {
                 "name": "Basic",
                 "ctype": "miscellaneous",
@@ -34,6 +100,16 @@
                 "name": "Default",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "StoryObj<VrKitBreadcrumbComponent>",
+                "defaultValue": "{\r\n  args: {\r\n    list: exampleList,\r\n  },\r\n}"
+            },
+            {
+                "name": "Default",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/vr-lib/src/lib/components/article/article-day.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -49,16 +125,6 @@
                 "deprecationMessage": "",
                 "type": "StoryObj<VrKitArticleComponent>",
                 "defaultValue": "{\r\n  args: {\r\n    display: 'sheet',\r\n    title: 'Sample Article Title',\r\n  },\r\n}"
-            },
-            {
-                "name": "Default",
-                "ctype": "miscellaneous",
-                "subtype": "variable",
-                "file": "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts",
-                "deprecated": false,
-                "deprecationMessage": "",
-                "type": "StoryObj<VrKitBreadcrumbComponent>",
-                "defaultValue": "{\r\n  args: {\r\n    list: exampleList,\r\n  },\r\n}"
             },
             {
                 "name": "Default",
@@ -164,6 +230,16 @@
                 "name": "meta",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Meta<ColorSwatchComponent>",
+                "defaultValue": "{\r\n\ttitle: 'Design Tokens/Color Variables',\r\n\tcomponent: ColorSwatchComponent,\r\n}"
+            },
+            {
+                "name": "meta",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
                 "file": "projects/vr-lib/src/lib/components/icon/icon-colorkey.stories.ts",
                 "deprecated": false,
                 "deprecationMessage": "",
@@ -261,6 +337,16 @@
                 "defaultValue": "{\r\n  parameters: {\r\n    controls: {\r\n      matchers: {\r\n       color: /(background|color)$/i,\r\n       date: /Date$/i,\r\n      },\r\n    },\r\n  },\r\n}"
             },
             {
+                "name": "SideBySide",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n\tdecorators: [\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t() =>\r\n\t\t\t\t`<div style=\"display: grid; grid-template-columns: 1fr 1fr; gap: 0;\">\r\n\t\t\t\t\t<div id=\"storywrapper\" class=\"vr-theme theme-day\" style=\"padding: 10px;\">\r\n\t\t\t\t\t\t<style>${swatchStyle}</style>\r\n\t\t\t\t\t\t<h2>Day Theme</h2>\r\n\t\t\t\t\t\t<div class=\"color-grid\">${buildSwatches(themeVariables)}</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"vr-theme theme-night\" style=\"background-color: #404040; padding: 10px;\">\r\n\t\t\t\t\t\t<h2>Night Theme</h2>\r\n\t\t\t\t\t\t<div class=\"color-grid\">${buildSwatches(themeVariables)}</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>`\r\n\t\t),\r\n\t],\r\n}"
+            },
+            {
                 "name": "steps",
                 "ctype": "miscellaneous",
                 "subtype": "variable",
@@ -269,6 +355,16 @@
                 "deprecationMessage": "",
                 "type": "Step[]",
                 "defaultValue": "[\r\n    { displayName: 'Mora C', active: true },\r\n    { displayName: 'Rattvik', active: true },\r\n    { displayName: 'Leksand', active: false },\r\n    { displayName: 'Djuras', active: false },\r\n]"
+            },
+            {
+                "name": "swatchStyle",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "",
+                "defaultValue": "`\r\n\t.color-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; padding: 20px; }\r\n\t.color-swatch { border-radius: 8px; overflow: hidden; border: 1px solid #ddd; }\r\n\t.color-swatch__preview { height: 48px; }\r\n\t.color-swatch__info { padding: 8px; font-family: monospace; font-size: 11px; background: #fff; }\r\n\t.theme-night .color-swatch__info { background: #333; color: #fff; }\r\n\t.color-swatch__name { font-weight: bold; margin-bottom: 4px; word-break: break-all; }\r\n\t.color-swatch__value { color: #666; }\r\n\t.theme-night .color-swatch__value { color: #aaa; }\r\n\th2 { padding: 20px 20px 0; font-family: sans-serif; }\r\n`"
             },
             {
                 "name": "template",
@@ -299,6 +395,36 @@
                 "deprecationMessage": "",
                 "type": "",
                 "defaultValue": "iconPaths\r\n\t.map(\r\n\t\t(path) =>\r\n\t\t\t`<vr-kit-icon [path]=\"'${path}'\" [color]=\"color\" [size]=\"'36px'\" [tooltipText]=\"'${path}'\"></vr-kit-icon>`\r\n\t)\r\n\t.join(' ')"
+            },
+            {
+                "name": "themeVariables",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "[]",
+                "defaultValue": "[\r\n\t'--awesomeloaderday-white',\r\n\t'--background-grey20',\r\n\t'--background-grey30',\r\n\t'--info-info',\r\n\t'--primary-green60',\r\n\t'--primarydark-green40',\r\n\t'--primarylight-grey30',\r\n\t'--primarylight-green30',\r\n\t'--primarylight-green45',\r\n\t'--primarylight-green50',\r\n\t'--primarylight-primarydark',\r\n\t'--primarylight-white',\r\n\t'--marketingyellow-orange40',\r\n\t'--marketingyellow-grey20',\r\n\t'--black-black',\r\n\t'--black-white',\r\n\t'--black-marketingyellow',\r\n\t'--blue10-orange20',\r\n\t'--blue30-blue30',\r\n\t'--blue40-blue10',\r\n\t'--green05-primarydark',\r\n\t'--green05-green05',\r\n\t'--green10-green20',\r\n\t'--green10-green30',\r\n\t'--green40-green05',\r\n\t'--green40-green20',\r\n\t'--green40-green45',\r\n\t'--green50-transparent',\r\n\t'--green50-green00',\r\n\t'--green50-green05',\r\n\t'--green50-green20',\r\n\t'--green60-primarylight',\r\n\t'--green60-transparent',\r\n\t'--green60-green00',\r\n\t'--green60-green05',\r\n\t'--green60-green40',\r\n\t'--green60-green60',\r\n\t'--grey20-white',\r\n\t'--grey20-green20',\r\n\t'--grey20-green45',\r\n\t'--grey20-grey20',\r\n\t'--grey20-grey80',\r\n\t'--grey20-green60',\r\n\t'--grey20-primarydark',\r\n\t'--grey20-orange20',\r\n\t'--grey30-white',\r\n\t'--grey30-grey60',\r\n\t'--grey35-grey20',\r\n\t'--grey35-grey50',\r\n\t'--grey35-grey60',\r\n\t'--grey35-grey80',\r\n\t'--grey35-green40',\r\n\t'--grey35-green45',\r\n\t'--grey35-green50',\r\n\t'--grey35-green60',\r\n\t'--grey35-violet80',\r\n\t'--grey35-white',\r\n\t'--grey40-green10',\r\n\t'--grey40-green30',\r\n\t'--grey40-green40',\r\n\t'--grey40-green45',\r\n\t'--grey40-green50',\r\n\t'--grey40-grey40',\r\n\t'--grey40-grey50',\r\n\t'--grey40-grey60',\r\n\t'--grey40-grey70',\r\n\t'--grey40-violet70',\r\n\t'--grey40-violet80',\r\n\t'--grey50-primarydark',\r\n\t'--grey50-white',\r\n\t'--grey50-grey20',\r\n\t'--grey50-grey30',\r\n\t'--grey50-grey40',\r\n\t'--grey50-grey50',\r\n\t'--grey50-grey60',\r\n\t'--grey60-green40',\r\n\t'--grey60-green45',\r\n\t'--grey60-grey40',\r\n\t'--grey60-grey50',\r\n\t'--grey60-grey60',\r\n\t'--grey60-violet40',\r\n\t'--grey60-white',\r\n\t'--grey70-grey30',\r\n\t'--grey70-grey35',\r\n\t'--grey70-grey40',\r\n\t'--grey70-grey70',\r\n\t'--grey80-grey20',\r\n\t'--grey80-grey30',\r\n\t'--grey80-grey35',\r\n\t'--grey80-grey40',\r\n\t'--grey80-grey50',\r\n\t'--grey80-white',\r\n\t'--orange10-orange30',\r\n\t'--orange10-orange20',\r\n\t'--orange10-grey20',\r\n\t'--orange20-blue10',\r\n\t'--pink10-pink10',\r\n\t'--pink20-violet40',\r\n\t'--pink30-violet20',\r\n\t'--pink30-violet30',\r\n\t'--pink40-violet00',\r\n\t'--pink40-violet10',\r\n\t'--pink60-violet10',\r\n\t'--pink60-violet20',\r\n\t'--red10-red20',\r\n\t'--red10-red30',\r\n\t'--red10-red40',\r\n\t'--red20-red30',\r\n\t'--violet20-violet40',\r\n\t'--violet30-violet20',\r\n\t'--violet70-violet00',\r\n\t'--violet70-violet10',\r\n\t'--violet80-violet00',\r\n\t'--violet80-violet10',\r\n\t'--white-black',\r\n\t'--white-primarylight',\r\n\t'--white-white',\r\n\t'--white-grey20',\r\n\t'--white-grey30',\r\n\t'--white-grey40',\r\n\t'--white-grey60',\r\n\t'--white-green10',\r\n\t'--white-green20',\r\n]"
+            },
+            {
+                "name": "ThemeVariables_Day",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n\tdecorators: [\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t() =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-day\">\r\n\t\t\t\t\t<style>${swatchStyle}</style>\r\n\t\t\t\t\t<h2>Theme Variables (Day)</h2>\r\n\t\t\t\t\t<div class=\"color-grid\">${buildSwatches(themeVariables)}</div>\r\n\t\t\t\t</div>`\r\n\t\t),\r\n\t],\r\n}"
+            },
+            {
+                "name": "ThemeVariables_Night",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Story",
+                "defaultValue": "{\r\n\tdecorators: [\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t() =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-night\" style=\"background-color: #404040;\">\r\n\t\t\t\t\t<style>${swatchStyle}</style>\r\n\t\t\t\t\t<h2>Theme Variables (Night)</h2>\r\n\t\t\t\t\t<div class=\"color-grid\">${buildSwatches(themeVariables)}</div>\r\n\t\t\t\t</div>`\r\n\t\t),\r\n\t],\r\n}"
             },
             {
                 "name": "Transparent",
@@ -381,8 +507,47 @@
                 "defaultValue": "{\r\n\targs: {\r\n\t\tlabel: 'No data available',\r\n\t\tsubLabel: 'This is little subText',\r\n\t},\r\n}"
             }
         ],
-        "functions": [],
+        "functions": [
+            {
+                "name": "buildSwatches",
+                "file": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                "ctype": "miscellaneous",
+                "subtype": "function",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "args": [
+                    {
+                        "name": "vars",
+                        "deprecated": false,
+                        "deprecationMessage": ""
+                    }
+                ],
+                "returnType": "string",
+                "jsdoctags": [
+                    {
+                        "name": "vars",
+                        "deprecated": false,
+                        "deprecationMessage": "",
+                        "tagName": {
+                            "text": "param"
+                        }
+                    }
+                ]
+            }
+        ],
         "typealiases": [
+            {
+                "name": "Story",
+                "ctype": "miscellaneous",
+                "subtype": "typealias",
+                "rawtype": "StoryObj<ColorSwatchComponent>",
+                "file": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "description": "",
+                "kind": 183
+            },
             {
                 "name": "Story",
                 "ctype": "miscellaneous",
@@ -485,6 +650,98 @@
         ],
         "enumerations": [],
         "groupedVariables": {
+            "projects/vr-lib/src/lib/components/color-variables.stories.ts": [
+                {
+                    "name": "baseColors",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[\r\n\t'--awesome-loader-day',\r\n\t'--background',\r\n\t'--error',\r\n\t'--icon',\r\n\t'--info',\r\n\t'--marketingblue',\r\n\t'--marketingpink',\r\n\t'--marketingviolet',\r\n\t'--marketingyellow',\r\n\t'--primary-light',\r\n\t'--primary-dark',\r\n\t'--warning',\r\n\t'--transparent',\r\n\t'--black',\r\n\t'--blue10',\r\n\t'--blue20',\r\n\t'--blue30',\r\n\t'--blue40',\r\n\t'--green00',\r\n\t'--green05',\r\n\t'--green10',\r\n\t'--green20',\r\n\t'--green30',\r\n\t'--green40',\r\n\t'--green45',\r\n\t'--green50',\r\n\t'--green60',\r\n\t'--grey20',\r\n\t'--grey30',\r\n\t'--grey35',\r\n\t'--grey40',\r\n\t'--grey50',\r\n\t'--grey60',\r\n\t'--grey70',\r\n\t'--grey80',\r\n\t'--orange10',\r\n\t'--orange20',\r\n\t'--orange30',\r\n\t'--orange40',\r\n\t'--orange50',\r\n\t'--pink10',\r\n\t'--pink20',\r\n\t'--pink30',\r\n\t'--pink40',\r\n\t'--pink60',\r\n\t'--red10',\r\n\t'--red20',\r\n\t'--red30',\r\n\t'--red40',\r\n\t'--violet00',\r\n\t'--violet10',\r\n\t'--violet20',\r\n\t'--violet30',\r\n\t'--violet40',\r\n\t'--violet70',\r\n\t'--violet80',\r\n\t'--white',\r\n]"
+                },
+                {
+                    "name": "BaseColors_Day",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n\tdecorators: [\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t() =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-day\">\r\n\t\t\t\t\t<style>${swatchStyle}</style>\r\n\t\t\t\t\t<h2>Base Colors (Day)</h2>\r\n\t\t\t\t\t<div class=\"color-grid\">${buildSwatches(baseColors)}</div>\r\n\t\t\t\t</div>`\r\n\t\t),\r\n\t],\r\n}"
+                },
+                {
+                    "name": "BaseColors_Night",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n\tdecorators: [\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t() =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-night\" style=\"background-color: #404040;\">\r\n\t\t\t\t\t<style>${swatchStyle}</style>\r\n\t\t\t\t\t<h2>Base Colors (Night)</h2>\r\n\t\t\t\t\t<div class=\"color-grid\">${buildSwatches(baseColors)}</div>\r\n\t\t\t\t</div>`\r\n\t\t),\r\n\t],\r\n}"
+                },
+                {
+                    "name": "meta",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Meta<ColorSwatchComponent>",
+                    "defaultValue": "{\r\n\ttitle: 'Design Tokens/Color Variables',\r\n\tcomponent: ColorSwatchComponent,\r\n}"
+                },
+                {
+                    "name": "SideBySide",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n\tdecorators: [\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t() =>\r\n\t\t\t\t`<div style=\"display: grid; grid-template-columns: 1fr 1fr; gap: 0;\">\r\n\t\t\t\t\t<div id=\"storywrapper\" class=\"vr-theme theme-day\" style=\"padding: 10px;\">\r\n\t\t\t\t\t\t<style>${swatchStyle}</style>\r\n\t\t\t\t\t\t<h2>Day Theme</h2>\r\n\t\t\t\t\t\t<div class=\"color-grid\">${buildSwatches(themeVariables)}</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t\t<div class=\"vr-theme theme-night\" style=\"background-color: #404040; padding: 10px;\">\r\n\t\t\t\t\t\t<h2>Night Theme</h2>\r\n\t\t\t\t\t\t<div class=\"color-grid\">${buildSwatches(themeVariables)}</div>\r\n\t\t\t\t\t</div>\r\n\t\t\t\t</div>`\r\n\t\t),\r\n\t],\r\n}"
+                },
+                {
+                    "name": "swatchStyle",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "",
+                    "defaultValue": "`\r\n\t.color-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; padding: 20px; }\r\n\t.color-swatch { border-radius: 8px; overflow: hidden; border: 1px solid #ddd; }\r\n\t.color-swatch__preview { height: 48px; }\r\n\t.color-swatch__info { padding: 8px; font-family: monospace; font-size: 11px; background: #fff; }\r\n\t.theme-night .color-swatch__info { background: #333; color: #fff; }\r\n\t.color-swatch__name { font-weight: bold; margin-bottom: 4px; word-break: break-all; }\r\n\t.color-swatch__value { color: #666; }\r\n\t.theme-night .color-swatch__value { color: #aaa; }\r\n\th2 { padding: 20px 20px 0; font-family: sans-serif; }\r\n`"
+                },
+                {
+                    "name": "themeVariables",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "[]",
+                    "defaultValue": "[\r\n\t'--awesomeloaderday-white',\r\n\t'--background-grey20',\r\n\t'--background-grey30',\r\n\t'--info-info',\r\n\t'--primary-green60',\r\n\t'--primarydark-green40',\r\n\t'--primarylight-grey30',\r\n\t'--primarylight-green30',\r\n\t'--primarylight-green45',\r\n\t'--primarylight-green50',\r\n\t'--primarylight-primarydark',\r\n\t'--primarylight-white',\r\n\t'--marketingyellow-orange40',\r\n\t'--marketingyellow-grey20',\r\n\t'--black-black',\r\n\t'--black-white',\r\n\t'--black-marketingyellow',\r\n\t'--blue10-orange20',\r\n\t'--blue30-blue30',\r\n\t'--blue40-blue10',\r\n\t'--green05-primarydark',\r\n\t'--green05-green05',\r\n\t'--green10-green20',\r\n\t'--green10-green30',\r\n\t'--green40-green05',\r\n\t'--green40-green20',\r\n\t'--green40-green45',\r\n\t'--green50-transparent',\r\n\t'--green50-green00',\r\n\t'--green50-green05',\r\n\t'--green50-green20',\r\n\t'--green60-primarylight',\r\n\t'--green60-transparent',\r\n\t'--green60-green00',\r\n\t'--green60-green05',\r\n\t'--green60-green40',\r\n\t'--green60-green60',\r\n\t'--grey20-white',\r\n\t'--grey20-green20',\r\n\t'--grey20-green45',\r\n\t'--grey20-grey20',\r\n\t'--grey20-grey80',\r\n\t'--grey20-green60',\r\n\t'--grey20-primarydark',\r\n\t'--grey20-orange20',\r\n\t'--grey30-white',\r\n\t'--grey30-grey60',\r\n\t'--grey35-grey20',\r\n\t'--grey35-grey50',\r\n\t'--grey35-grey60',\r\n\t'--grey35-grey80',\r\n\t'--grey35-green40',\r\n\t'--grey35-green45',\r\n\t'--grey35-green50',\r\n\t'--grey35-green60',\r\n\t'--grey35-violet80',\r\n\t'--grey35-white',\r\n\t'--grey40-green10',\r\n\t'--grey40-green30',\r\n\t'--grey40-green40',\r\n\t'--grey40-green45',\r\n\t'--grey40-green50',\r\n\t'--grey40-grey40',\r\n\t'--grey40-grey50',\r\n\t'--grey40-grey60',\r\n\t'--grey40-grey70',\r\n\t'--grey40-violet70',\r\n\t'--grey40-violet80',\r\n\t'--grey50-primarydark',\r\n\t'--grey50-white',\r\n\t'--grey50-grey20',\r\n\t'--grey50-grey30',\r\n\t'--grey50-grey40',\r\n\t'--grey50-grey50',\r\n\t'--grey50-grey60',\r\n\t'--grey60-green40',\r\n\t'--grey60-green45',\r\n\t'--grey60-grey40',\r\n\t'--grey60-grey50',\r\n\t'--grey60-grey60',\r\n\t'--grey60-violet40',\r\n\t'--grey60-white',\r\n\t'--grey70-grey30',\r\n\t'--grey70-grey35',\r\n\t'--grey70-grey40',\r\n\t'--grey70-grey70',\r\n\t'--grey80-grey20',\r\n\t'--grey80-grey30',\r\n\t'--grey80-grey35',\r\n\t'--grey80-grey40',\r\n\t'--grey80-grey50',\r\n\t'--grey80-white',\r\n\t'--orange10-orange30',\r\n\t'--orange10-orange20',\r\n\t'--orange10-grey20',\r\n\t'--orange20-blue10',\r\n\t'--pink10-pink10',\r\n\t'--pink20-violet40',\r\n\t'--pink30-violet20',\r\n\t'--pink30-violet30',\r\n\t'--pink40-violet00',\r\n\t'--pink40-violet10',\r\n\t'--pink60-violet10',\r\n\t'--pink60-violet20',\r\n\t'--red10-red20',\r\n\t'--red10-red30',\r\n\t'--red10-red40',\r\n\t'--red20-red30',\r\n\t'--violet20-violet40',\r\n\t'--violet30-violet20',\r\n\t'--violet70-violet00',\r\n\t'--violet70-violet10',\r\n\t'--violet80-violet00',\r\n\t'--violet80-violet10',\r\n\t'--white-black',\r\n\t'--white-primarylight',\r\n\t'--white-white',\r\n\t'--white-grey20',\r\n\t'--white-grey30',\r\n\t'--white-grey40',\r\n\t'--white-grey60',\r\n\t'--white-green10',\r\n\t'--white-green20',\r\n]"
+                },
+                {
+                    "name": "ThemeVariables_Day",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n\tdecorators: [\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t() =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-day\">\r\n\t\t\t\t\t<style>${swatchStyle}</style>\r\n\t\t\t\t\t<h2>Theme Variables (Day)</h2>\r\n\t\t\t\t\t<div class=\"color-grid\">${buildSwatches(themeVariables)}</div>\r\n\t\t\t\t</div>`\r\n\t\t),\r\n\t],\r\n}"
+                },
+                {
+                    "name": "ThemeVariables_Night",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Story",
+                    "defaultValue": "{\r\n\tdecorators: [\r\n\t\tcomponentWrapperDecorator(\r\n\t\t\t() =>\r\n\t\t\t\t`<div id=\"storywrapper\" class=\"vr-theme theme-night\" style=\"background-color: #404040;\">\r\n\t\t\t\t\t<style>${swatchStyle}</style>\r\n\t\t\t\t\t<h2>Theme Variables (Night)</h2>\r\n\t\t\t\t\t<div class=\"color-grid\">${buildSwatches(themeVariables)}</div>\r\n\t\t\t\t</div>`\r\n\t\t),\r\n\t],\r\n}"
+                }
+            ],
             "projects/vr-lib/src/lib/components/no-data/no-data-day.stories.ts": [
                 {
                     "name": "Basic",
@@ -549,6 +806,28 @@
                     "defaultValue": "{\r\n\targs: {\r\n\t\tlabel: 'No data available',\r\n\t\tsubLabel: 'This is little subText',\r\n\t},\r\n}"
                 }
             ],
+            "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts": [
+                {
+                    "name": "Default",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "StoryObj<VrKitBreadcrumbComponent>",
+                    "defaultValue": "{\r\n  args: {\r\n    list: exampleList,\r\n  },\r\n}"
+                },
+                {
+                    "name": "exampleList",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "IBreadcrumb[]",
+                    "defaultValue": "[\r\n  { label: 'Home', url: '/' },\r\n  { label: 'Section', url: '/section' },\r\n  { label: 'Page', url: '/section/page' },\r\n]"
+                }
+            ],
             "projects/vr-lib/src/lib/components/article/article-day.stories.ts": [
                 {
                     "name": "Default",
@@ -611,28 +890,6 @@
                     "deprecationMessage": "",
                     "type": "StoryObj<VrKitArticleComponent>",
                     "defaultValue": "{\r\n  args: {\r\n    display: 'white',\r\n    title: 'White Article',\r\n  },\r\n}"
-                }
-            ],
-            "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts": [
-                {
-                    "name": "Default",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "StoryObj<VrKitBreadcrumbComponent>",
-                    "defaultValue": "{\r\n  args: {\r\n    list: exampleList,\r\n  },\r\n}"
-                },
-                {
-                    "name": "exampleList",
-                    "ctype": "miscellaneous",
-                    "subtype": "variable",
-                    "file": "projects/vr-lib/src/lib/components/breadcrumb/breadcrumb.stories.ts",
-                    "deprecated": false,
-                    "deprecationMessage": "",
-                    "type": "IBreadcrumb[]",
-                    "defaultValue": "[\r\n  { label: 'Home', url: '/' },\r\n  { label: 'Section', url: '/section' },\r\n  { label: 'Page', url: '/section/page' },\r\n]"
                 }
             ],
             "projects/vr-lib/src/lib/components/header/header.stories.ts": [
@@ -888,9 +1145,52 @@
                 }
             ]
         },
-        "groupedFunctions": {},
+        "groupedFunctions": {
+            "projects/vr-lib/src/lib/components/color-variables.stories.ts": [
+                {
+                    "name": "buildSwatches",
+                    "file": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                    "ctype": "miscellaneous",
+                    "subtype": "function",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "args": [
+                        {
+                            "name": "vars",
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "returnType": "string",
+                    "jsdoctags": [
+                        {
+                            "name": "vars",
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
         "groupedEnumerations": {},
         "groupedTypeAliases": {
+            "projects/vr-lib/src/lib/components/color-variables.stories.ts": [
+                {
+                    "name": "Story",
+                    "ctype": "miscellaneous",
+                    "subtype": "typealias",
+                    "rawtype": "StoryObj<ColorSwatchComponent>",
+                    "file": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "description": "",
+                    "kind": 183
+                }
+            ],
             "projects/vr-lib/src/lib/material-overview/material-overview.stories.ts": [
                 {
                     "name": "Story",
@@ -1105,6 +1405,125 @@
                 "linktype": "miscellaneous",
                 "linksubtype": "variable",
                 "name": "exampleList",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "ColorSwatchComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                "type": "function",
+                "linktype": "miscellaneous",
+                "linksubtype": "function",
+                "name": "buildSwatches",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "baseColors",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "BaseColors_Day",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "BaseColors_Night",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "meta",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "SideBySide",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "swatchStyle",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "themeVariables",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ThemeVariables_Day",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "ThemeVariables_Night",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "projects/vr-lib/src/lib/components/color-variables.stories.ts",
+                "type": "type alias",
+                "linktype": "miscellaneous",
+                "linksubtype": "typealias",
+                "name": "Story",
                 "coveragePercent": 0,
                 "coverageCount": "0/1",
                 "status": "low"
