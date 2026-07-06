@@ -15,5 +15,18 @@ permissions:
   contents: read
 
 jobs:
-  validate-pr-title:
-    uses: vr-sverige/app-vrsverige-onevr-iac-common/.github/workflows/validate-pr-title.yml@v1
+  validate-pr-title: # Can't use the re-usable workflows repo as this repo is public, but the re-usable workflows repo is private
+    runs-on: ubuntu-latest
+    steps:
+      - name: Validate PR title contains Jira ticket
+        env:
+          TITLE: ${{ github.event.pull_request.title }}
+        run: |
+          JIRA_REGEX='[A-Z]+-[0-9]+|dependabot:'
+
+          echo "PR title: $TITLE"
+
+          if ! [[ "$TITLE" =~ $JIRA_REGEX ]]; then
+            echo "::error::PR title must contain a Jira ticket (e.g. PROJ-123) or be a Dependabot PR"
+            exit 1
+          fi
