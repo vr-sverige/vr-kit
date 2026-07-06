@@ -1,0 +1,19 @@
+name: Pull request validation
+
+on:
+  pull_request:
+    branches:
+      - master
+    types:
+      - opened
+      - synchronize
+      - reopened
+      - ready_for_review
+      - edited
+
+permissions:
+  contents: read
+
+jobs:
+  validate-pr-title:
+    uses: vr-sverige/app-vrsverige-onevr-iac-common/.github/workflows/validate-pr-title.yml@v1

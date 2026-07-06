@@ -1,5 +1,7 @@
 # VrLib
 
+This project contains shared components and styles for One VR Angular applications.
+
 ## Development server
 
 To start a local storybook, run:
@@ -22,32 +24,31 @@ For a complete list of available schematics (such as `components`, `directives`,
 ng generate --help
 ```
 
-### Publishing the Library
+## Publishing the Library
 
 Once the project is built, you can publish your library by following these steps:
 
 1. To build the library, run:
-
-```bash
-ng build vr-lib
-```
+    ```bash
+    ng build vr-lib
+    ```
 
 2. This command will compile your project, and the build artifacts will be placed in the `dist/` directory.
    ```bash
    npx sass --load-path=node_modules projects/vr-lib/src/lib/styles/styles.scss dist/vr-lib/styles.css
    ```
 
-2. Navigate to the `dist` directory:
+3. Navigate to the `dist` directory:
    ```bash
    cd dist/vr-lib
    ```
 
-3. Login to npm (if not already logged in):
+4. Login to npm (if not already logged in):
    ```bash
    npm login
    ```
 
-4. Run the `npm publish` command to publish your library to the npm registry:
+5. Run the `npm publish` command to publish your library to the npm registry:
    ```bash
    npm publish
    ```
